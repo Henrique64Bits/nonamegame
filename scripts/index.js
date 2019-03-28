@@ -100,7 +100,7 @@ function render()
     img.src = "https://i.imgur.com/dUHek7i.png";
     ctx.drawImage(img, 0,0, canvas.width, canvas.height);
     
-    ctx.drawImage(Player.image, Player.x, Player.y, 20,70);
+    ctx.drawImage(Player.image, Player.x, Player.y, 5,15);
 }
 
 function loop()
@@ -109,5 +109,5 @@ function loop()
     moviment();
     render();
     jump();
-    gravity();
+    //gravity();
 }
