@@ -61,7 +61,7 @@ function keyUp( event )
 function moviment()
 {
     Player.x += Player.velX;
-    Player.y += Player.jump;
+    //Player.y += Player.jump;
 }
 
 function jump()
@@ -101,7 +101,7 @@ function render()
     img.src = "https://i.imgur.com/dUHek7i.png";
     ctx.drawImage(img, 0,0, canvas.width, canvas.height);
     
-    ctx.drawImage(Player.image, Player.x, Player.y, 5,15);
+    ctx.drawImage(Player.image, Player.x, Player.y, 10,30);
 }
 
 function loop()
