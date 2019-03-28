@@ -83,7 +83,7 @@ function jump()
         }
     }
 }
-
+/*
 function gravity()
 {
     if( Player.gravity == true )
@@ -91,6 +91,7 @@ function gravity()
         Player.y += 1;
     } 
 }
+*/
 
 // functions basic
 
