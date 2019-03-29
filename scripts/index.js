@@ -31,13 +31,13 @@ function keyDown( event )
     
     if( code == 37 )
     {
-        Player.velX = 2;
+        Player.velX = -2;
     } else if( code == 38 )
     {
         Player.jump_bol = true;
     } else if( code == 39 )
     {
-        Player.velX = -2;
+        Player.velX = 2;
     }
 }
 
