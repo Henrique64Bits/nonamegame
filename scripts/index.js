@@ -2,8 +2,8 @@
 // bob image: https://i.imgur.com/SL6zT7u.png
 
 var Player = {
-    x: 0,
-    y: 0,
+    x: 100,
+    y: 70,
     src: "res/Bob.png",
     velX: 0, 
     jump: 0,
