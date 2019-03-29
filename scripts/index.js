@@ -4,13 +4,11 @@
 // Variables
 
 var Map = {
-    canvas: document.createElement("map_canvas"),
     viewX: 0,
     viewY: 0,
     tilesX: [],
     tilesY: []
 }
-Map.ctx = Map.canvas.getContext("2d");
 
 var Player = {
     x: 100,
