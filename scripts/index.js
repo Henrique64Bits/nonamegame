@@ -4,7 +4,7 @@
 var Player = {
     x: 0,
     y: 0,
-    src: "../res/Bob.png",
+    src: "res/Bob.png",
     velX: 0, 
     jump: 0,
     jump_bol: false,
