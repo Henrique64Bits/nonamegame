@@ -15,7 +15,7 @@ var Player = {
 Player.image = new Image();
 Player.image.src = Player.src;
 
-var canvas = document.querySelector("canvas");
+var canvas = document.querySelector("#game_canvas");
 var ctx = canvas.getContext("2d");
 
 var stylew1 = window.getComputedStyle(canvas).width;
