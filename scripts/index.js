@@ -15,6 +15,12 @@ Player.image.src = Player.src;
 
 var canvas = document.querySelector("canvas");
 var ctx = canvas.getContext("2d");
+var stylew1 = window.getComputedStyle(canvas).width;
+var valor1 = parseInt(stylew1.substr(0,stylew1.search("px")));
+var stylew2 = window.getComputedStyle(canvas).height;
+var valor2 = parseInt(stylew2.substr(0,stylew2.search("px")));
+canvas.width = valor1;
+canvas.height = valor2;
 
 // key adapters
 
@@ -102,7 +108,7 @@ function render()
     img.src = "https://i.imgur.com/dUHek7i.png";
     ctx.drawImage(img, 0,0, canvas.width, canvas.height);
     
-    ctx.drawImage(Player.image, Player.x, Player.y);
+    ctx.drawImage(Player.image, Player.x, Player.y, 50, 100);
 }
 
 function loop()
