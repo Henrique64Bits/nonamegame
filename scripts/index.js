@@ -7,6 +7,8 @@ var imported = document.createElement("script");
 imported.src = "scripts/events.js";
 document.head.appendChild(imported);
 
+main();
+
 var Map = {
     viewX: 0,
     viewY: 0,
