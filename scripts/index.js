@@ -1,9 +1,10 @@
 // background image: https://i.imgur.com/8WrImnw.png
+// bob image: https://i.imgur.com/SL6zT7u.png
 
 var Player = {
     x: 0,
     y: 0,
-    src: "https://i.imgur.com/SL6zT7u.png",
+    src: "../res/Bob.png",
     velX: 0, 
     jump: 0,
     jump_bol: false,
