@@ -51,6 +51,10 @@ canvas.height = valor2;
 window.addEventListener("keydown", keyDown);
 window.addEventListener("keyup", keyUp);
 
+// sla
+
+loop();
+
 // Key controls
 
 function keyDown( event )
@@ -144,6 +148,3 @@ function loop()
     jump();
     //gravity();
 }
-
-
-loop();
