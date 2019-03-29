@@ -1,6 +1,8 @@
 // background image: https://i.imgur.com/8WrImnw.png
 // bob image: https://i.imgur.com/SL6zT7u.png
 
+main();
+
 // Variables
 
 var Map = {
