@@ -3,6 +3,17 @@
 
 // Variables
 
+var Map = {
+    canvas: document.createElement("map_canvas"),
+    viewX: 0,
+    viewY: 0,
+    tilesX: [],
+    tilesY: []
+}
+Map.ctx = Map.canvas.getContext("2d");
+Map.canvas.width = canvas.width;
+Map.canvas.height = canvas.height;
+
 var Player = {
     x: 100,
     y: 70,
