@@ -108,7 +108,7 @@ function render()
     img.src = "https://i.imgur.com/dUHek7i.png";
     ctx.drawImage(img, 0,0, canvas.width, canvas.height);
     
-    ctx.drawImage(Player.image, Player.x, Player.y, 50, 100);
+    ctx.drawImage(Player.image, Player.x, Player.y, 10,30);
 }
 
 function loop()
