@@ -1,6 +1,27 @@
 // background image: https://i.imgur.com/8WrImnw.png
 // bob image: https://i.imgur.com/SL6zT7u.png
 
+// Variables
+
+var Background = {
+    viewX: 0,
+    viewY: 0,
+    background: new Image(),
+    background_img: "res/background_0.png",
+    width: canvas.width,
+    height: canvas.height
+};
+Background.background.src = Background.background_image;
+
+var Map = {
+    viewX: 0,
+    viewY: 0,
+    tilesX: [],
+    tilesY: [],
+    canvas: document.createElement("map_canvas")
+};
+Map.ctx = Map.canvas.getContext("2d");
+
 var Player = {
     x: 100,
     y: 70,
@@ -15,19 +36,20 @@ Player.image.src = Player.src;
 
 var canvas = document.querySelector("canvas");
 var ctx = canvas.getContext("2d");
+
 var stylew1 = window.getComputedStyle(canvas).width;
 var valor1 = parseInt(stylew1.substr(0,stylew1.search("px")));
+
 var stylew2 = window.getComputedStyle(canvas).height;
 var valor2 = parseInt(stylew2.substr(0,stylew2.search("px")));
+
 canvas.width = valor1;
 canvas.height = valor2;
 
-// key adapters
+// Event adapters
 
 window.addEventListener("keydown", keyDown);
 window.addEventListener("keyup", keyUp);
-
-loop();
 
 // Key controls
 
@@ -106,9 +128,12 @@ function render()
 {
     var img = new Image();
     img.src = "https://i.imgur.com/dUHek7i.png";
-    ctx.drawImage(img, 0,0, canvas.width, canvas.height);
+    img.onload = function() 
+    {
+        ctx.drawImage(img, 0,0, canvas.width, canvas.height);
+    }
     
-    ctx.drawImage(Player.image, Player.x, Player.y, 30,65);
+    ctx.drawImage(Player.image, Player.x, Player.y, 30,70);
 }
 
 function loop()
@@ -119,3 +144,6 @@ function loop()
     jump();
     //gravity();
 }
+
+
+loop();
