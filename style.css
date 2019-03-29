@@ -5,7 +5,7 @@ body {
 }
 
 canvas#game_canvas {
-    width: 300;
-    height: 400;
-    box-shadow: 0px 0px 4px darkgray;
+    width: 300px;
+    height: 400px;
+    box-shadow: 0px 0px 4px gray;
 }
