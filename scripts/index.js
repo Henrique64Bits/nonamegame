@@ -11,8 +11,6 @@ var Map = {
     tilesY: []
 }
 Map.ctx = Map.canvas.getContext("2d");
-Map.canvas.width = canvas.width;
-Map.canvas.height = canvas.height;
 
 var Player = {
     x: 100,
