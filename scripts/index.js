@@ -3,25 +3,6 @@
 
 // Variables
 
-var Background = {
-    viewX: 0,
-    viewY: 0,
-    background: new Image(),
-    background_img: "res/background_0.png",
-    width: canvas.width,
-    height: canvas.height
-};
-Background.background.src = Background.background_image;
-
-var Map = {
-    viewX: 0,
-    viewY: 0,
-    tilesX: [],
-    tilesY: [],
-    canvas: document.createElement("map_canvas")
-};
-Map.ctx = Map.canvas.getContext("2d");
-
 var Player = {
     x: 100,
     y: 70,
