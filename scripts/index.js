@@ -132,10 +132,7 @@ function render()
 {
     var img = new Image();
     img.src = "https://i.imgur.com/dUHek7i.png";
-    img.onload = function() 
-    {
-        ctx.drawImage(img, 0,0, canvas.width, canvas.height);
-    }
+    ctx.drawImage(img, 0,0, canvas.width, canvas.height);
     
     ctx.drawImage(Player.image, Player.x, Player.y, 30,70);
 }
