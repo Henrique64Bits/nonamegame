@@ -8,11 +8,13 @@ Events.keyPress = function( def )
 {
     def.key = event.keyCode;
     def();
+    return def;
 }
 Events.keyReleased = function( def )
 {
     def.key = event.keyCode;
     def();
+    return def;
 }
 
 Events.keys.left = function( press, released )
