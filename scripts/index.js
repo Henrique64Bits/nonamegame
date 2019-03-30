@@ -1,15 +1,6 @@
 // background image: https://i.imgur.com/8WrImnw.png
 // bob image: https://i.imgur.com/SL6zT7u.png
 
-Events.keys.up( function()
-{
-    // pass
-},
-function()
-{
-    alert("yeaahh boiiiiiiiiii!");
-});
-
 // Variables
 
 var Map = {
@@ -45,8 +36,8 @@ canvas.height = valor2;
 
 // Event adapters
 
-//window.addEventListener("keydown", keyDown);
-//window.addEventListener("keyup", keyUp);
+window.addEventListener("keydown", keyDown);
+window.addEventListener("keyup", keyUp);
 
 // sla
 
