@@ -178,10 +178,6 @@ function render()
             {
                 Player.gravity = false;
             }
-            else 
-            {
-                Player.gravity = true;
-            }
         }
     }
 }
