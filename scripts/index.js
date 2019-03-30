@@ -18,8 +18,6 @@ for( a in _tiles )
             Map.tiles[a] = [];
             Map.tiles[a][i] = [];
             Map.tiles[a][i][n] = _tiles[a][i][n];
-            Map.tilesH = canvas.width/a;
-            Map.tilesW = canvas.height/i;
         }
     }
 }
