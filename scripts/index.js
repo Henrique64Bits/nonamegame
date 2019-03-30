@@ -15,6 +15,8 @@ var Map = {
 var Player = {
     x: 100,
     y: 70,
+    width: 30,
+    height: 70,
     src: "res/bob_0.png",
     velX: 0, 
     jump: 0,
@@ -113,7 +115,7 @@ function keyUp( event )
 function moviment()
 {
     Player.x += Player.velX;
-    //Player.y += Player.jump;
+    Player.y = Player.y+Player.jump;
 }
 
 function jump()
@@ -125,7 +127,7 @@ function jump()
         
         if( Player.jump < 10 )
         {
-            Player.jump += 1;
+            Player.jump += -1;
         } 
         else if( Player.jump >= 10 )
         {
@@ -135,15 +137,16 @@ function jump()
         }
     }
 }
-/*
+
+
 function gravity()
 {
     if( Player.gravity == true )
     {
         Player.y += 1;
-    } 
+    }
 }
-*/
+
 
 // functions basic
 
@@ -153,7 +156,7 @@ function render()
     img.src = "https://i.imgur.com/dUHek7i.png";
     ctx.drawImage(img, 0,0, canvas.width, canvas.height);
     
-    ctx.drawImage(Player.image, Player.x, Player.y, 30,70);
+    ctx.drawImage(Player.image, Player.x, Player.y, Player.width,Player.height);
     
     var tm = [];
     
@@ -172,6 +175,14 @@ function render()
                 tm[a][i].src = "res/tile_1.png";
                 ctx.drawImage(tm[a][i], Map.tilesW*i, Map.tilesH*a, Map.tilesW, Map.tilesH);
             }
+            if( ( Player.x >= Map.tilesW*i ) && ( Map( Player.y + Player.height ) >= ( Map.tilesH*a ) )
+            {
+                Player.gravity = false;
+            }
+            else 
+            {
+                Player.gravity = true;
+            }
         }
     }
 }
@@ -182,5 +193,5 @@ function loop()
     moviment();
     render();
     jump();
-    //gravity();
+    gravity();
 }
