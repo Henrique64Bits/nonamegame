@@ -10,8 +10,8 @@ var Map = {
     tilesW: 30,
     tilesH: 30,
     tiles_img: ["","res/tiles_0.png"],
-    tiles_x: 0,
-    tiles_y: 0
+    tiles_x: [],
+    tiles_y: []
 }
 
 var Player = {
@@ -186,8 +186,9 @@ function render()
         {
             tm[a] = [];
             tm[a][i] = new Image();
-            Map.tiles_x = Map.tilesW*i;
-            Map.tiles_y = Map.tilesH*a;
+            
+            Map.tiles_x[i] = Map.tilesW*i;
+            Map.tiles_y[a] = Map.tilesH*a;
                 
             if( Map.tiles[a][i] == 0 )
             {
@@ -198,12 +199,23 @@ function render()
                 tm[a][i].src = "res/tile_1.png";
                 ctx.drawImage(tm[a][i], Map.tilesW*i, Map.tilesH*a, Map.tilesW, Map.tilesH);
                 
-                /*if( ( ( Player.y + Player.height ) >= Map.tiles_y ) && ( ( Player.x + Player.width ) >= Map.tiles_x ) && ( Player.x < ( Map.tiles_x + Map.tilesW ) ) ) ) )
-                {
-                    alert("colidiu!");
-                }*/
+                /**/
             }
            
+        }
+    }
+}
+
+function colliders()
+{
+    for( a in Map.tiles_x )
+    {
+        for( i in Map.tiles_y )
+        {
+            if( Player.y + Player.height  >= Map.tiles_y[i] && Player.y < Map.tiles_y[i]+Map.tilesH  &&  Player.x + Player.width  >= Map.tiles_x[a]  &&  Player.x <  Map.tiles_x[a] + Map.tilesW )
+            {
+                alert("colidiu!");
+            }
         }
     }
 }
@@ -218,4 +230,5 @@ function loop()
     {
         jump();
     }
+    colliders();
 }
