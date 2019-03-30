@@ -164,10 +164,10 @@ function collider( obj1, obj2 )
     {
         return true;
     }
-    else if( obj1.y <= ( obj2.y + obj2.height ) )
+    /*else if( obj1.y <= ( obj2.y + obj2.height ) )
     {
         return true;
-    }
+    }*/
     
     return false;
 }
