@@ -6,20 +6,9 @@
 var Map = {
     viewX: 0,
     viewY: 0,
-    tiles: []
-}
-
-for( a in _tiles )
-{
-    for( i in _tiles[a] )
-    {
-        for( n in _tiles[a][i] )
-        {
-            Map.tiles[a] = [];
-            Map.tiles[a][i] = [];
-            Map.tiles[a][i][n] = _tiles[a][i][n];
-        }
-    }
+    tiles: [],
+    tilesW: 0,
+    tilesH: 0
 }
 
 var Player = {
@@ -51,7 +40,20 @@ canvas.width = valor1;
 canvas.height = valor2;
 
 
-
+for( a in _tiles )
+{
+    for( i in _tiles[a] )
+    {
+        for( n in _tiles[a][i] )
+        {
+            Map.tiles[a] = [];
+            Map.tiles[a][i] = [];
+            Map.tiles[a][i][n] = _tiles[a][i][n];
+            Map.tilesW = canvas.width/i;
+            Map.tilesH = canvas.height/a;
+        }
+    }
+}
 
 
 
