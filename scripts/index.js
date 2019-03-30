@@ -7,8 +7,8 @@ var Map = {
     viewX: 0,
     viewY: 0,
     tiles: [],
-    tilesW: 0,
-    tilesH: 0,
+    tilesW: 30,
+    tilesH: 30,
     tiles_img: ["","res/tiles_0.png"]
 }
 
@@ -46,9 +46,7 @@ for( a in _tiles )
     for( i in _tiles[a] )
     {
          Map.tiles[a] = _tiles[a];
-         Map.tiles[a][i] = _tiles[a][i];
-         Map.tilesW = canvas.width/i;
-         Map.tilesH = canvas.height/a;
+         //Map.tiles[a][i] = _tiles[a][i];
         
     }
 }
@@ -172,7 +170,7 @@ function render()
             if( Map.tiles[a][i] == 1 )
             {
                 tm[a][i].src = "res/tile_0.png";
-                ctx.drawImage(tm[a][i], Map.tilesW*i, 200, Map.tilesW, Map.tilesH);
+                ctx.drawImage(tm[a][i], Map.tilesW*i, Map.tilesH*a, Map.tilesW, Map.tilesH);
             }
         }
     }
