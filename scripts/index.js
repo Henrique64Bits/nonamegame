@@ -81,6 +81,7 @@ function keyDown( event )
     } else if( code == 38 )
     {
         Player.jump_bol = true;
+        Player.gravity = false;
     } else if( code == 39 )
     {
         Player.velX = 5;
@@ -97,6 +98,7 @@ function keyUp( event )
     } else if( code == 38 )
     {
         Player.jump_bol = false;
+        Player.gravity = true;
     } else if( code == 39 )
     {
         Player.velX = 0;
@@ -126,7 +128,7 @@ function jump()
         
         if( Player.jump < 10 )
         {
-            Player.jump += -1;
+            Player.jump += -5;
         } 
         else if( Player.jump >= 10 )
         {
@@ -142,7 +144,7 @@ function gravity()
 {
     if( Player.gravity == true )
     {
-        Player.y += 1;
+        Player.y += 5;
     }
 }
 
