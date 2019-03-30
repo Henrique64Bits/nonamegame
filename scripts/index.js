@@ -155,7 +155,9 @@ function render()
     
     ctx.drawImage(Player.image, Player.x, Player.y, 30,70);
     
-    var tm = [];
+    
+}
+var tm = [];
     
     for( a in Map.tiles )
     {
@@ -174,7 +176,6 @@ function render()
             }
         }
     }
-}
 
 function loop()
 {
