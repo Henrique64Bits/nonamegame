@@ -131,14 +131,8 @@ function jump()
         if( Player.jump < 10 )
         {
             Player.gravity = false;
-            Player.jump += -7;
+            Player.jump += -10;
         } 
-        else if( Player.jump >= 10 )
-        {
-            Player.jump_bol = false;
-            Player.jump = 0;
-            Player.gravity = true;
-        }
     }
 }
 
@@ -147,7 +141,7 @@ function gravity()
 {
     if( Player.gravity == true )
     {
-        Player.y += 10;
+        Player.y += 15;
     }
 }
 
