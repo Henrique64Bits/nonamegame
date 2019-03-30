@@ -75,13 +75,13 @@ function keyDown( event )
     
     if( code == 37 )
     {
-        Player.velX = -2;
+        Player.velX = -3;
     } else if( code == 38 )
     {
         Player.jump_bol = true;
     } else if( code == 39 )
     {
-        Player.velX = 2;
+        Player.velX = 3;
     }
 }
 
@@ -155,9 +155,7 @@ function render()
     
     ctx.drawImage(Player.image, Player.x, Player.y, 30,70);
     
-    
-}
-var tm = [];
+    var tm = [];
     
     for( a in Map.tiles )
     {
@@ -176,6 +174,7 @@ var tm = [];
             }
         }
     }
+}
 
 function loop()
 {
