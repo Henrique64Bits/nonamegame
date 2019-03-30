@@ -45,8 +45,8 @@ canvas.height = valor2;
 
 // Event adapters
 
-window.addEventListener("keydown", keyDown);
-window.addEventListener("keyup", keyUp);
+//window.addEventListener("keydown", keyDown);
+//window.addEventListener("keyup", keyUp);
 
 // sla
 
