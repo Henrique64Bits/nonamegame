@@ -3,6 +3,10 @@
 
 Events.keys.up( function()
 {
+    // pass
+},
+function()
+{
     alert("yeaahh boiiiiiiiiii!");
 });
 
