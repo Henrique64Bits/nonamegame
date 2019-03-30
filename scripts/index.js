@@ -98,6 +98,7 @@ function keyUp( event )
     {
         Player.jump_bol = false;
         Player.jump = 0;
+        Player.gravity = true;
     } else if( code == 39 )
     {
         Player.velX = 0;
