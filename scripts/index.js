@@ -199,11 +199,7 @@ function render()
                 tm[a][i].src = "res/tile_1.png";
                 ctx.drawImage(tm[a][i], Map.tilesW*i, Map.tilesH*a, Map.tilesW, Map.tilesH);
             }
-            
-            if( collider(Player.image, tm[a][i]) == true )
-            {
-                alert("colidiu!");
-            }
+           
         }
     }
 }
