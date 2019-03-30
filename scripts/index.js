@@ -78,12 +78,13 @@ function keyDown( event )
     if( code == 37 )
     {
         Player.velX = -5;
-    } else if( code == 38 )
-    {
-        Player.jump_bol = true;
     } else if( code == 39 )
     {
         Player.velX = 5;
+    }
+    if( code == 38 )
+    {
+        Player.jump_bol = true;
     }
 }
 
@@ -94,14 +95,15 @@ function keyUp( event )
     if( code == 37 )
     {
         Player.velX = 0;
-    } else if( code == 38 )
+    } else if( code == 39 )
+    {
+        Player.velX = 0;
+    }
+    if( code == 38 )
     {
         Player.jump_bol = false;
         Player.jump = 0;
         Player.gravity = true;
-    } else if( code == 39 )
-    {
-        Player.velX = 0;
     }
 }
 
