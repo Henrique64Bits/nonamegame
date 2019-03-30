@@ -45,7 +45,7 @@ for( a in _tiles )
 {
     for( i in _tiles[a] )
     {
-         Map.tiles[a] = [];
+         Map.tiles[a] = _tiles[a];
          Map.tiles[a][i] = _tiles[a][i];
          Map.tilesW = canvas.width/i;
          Map.tilesH = canvas.height/a;
