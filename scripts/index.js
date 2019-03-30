@@ -9,7 +9,9 @@ var Map = {
     tiles: [],
     tilesW: 30,
     tilesH: 30,
-    tiles_img: ["","res/tiles_0.png"]
+    tiles_img: ["","res/tiles_0.png"],
+    tiles_x: 0,
+    tiles_y: 0
 }
 
 var Player = {
@@ -190,8 +192,8 @@ function render()
         {
             tm[a] = [];
             tm[a][i] = new Image();
-            tm[a][i].x = Map.tilesW*i;
-            tm[a][i].y = Map.tilesH*a;
+            Map.tiles_x = Map.tilesW*i;
+            Map.tiles_y = Map.tilesH*a;
                 
             if( Map.tiles[a][i] == 0 )
             {
@@ -202,7 +204,7 @@ function render()
                 tm[a][i].src = "res/tile_1.png";
                 ctx.drawImage(tm[a][i], Map.tilesW*i, Map.tilesH*a, Map.tilesW, Map.tilesH);
                 
-                if( ( ( Player.y + Player.height ) >= tm[a][i].y ) && ( ( Player.x + Player.width ) >= tm[a][i].x ) && ( Player.x < ( tm[a][i].x + Map.tilesW*i ) ) ) ) )
+                if( ( ( Player.y + Player.height ) >= Map.tiles_y ) && ( ( Player.x + Player.width ) >= Map.tiles_x ) && ( Player.x < ( Map.tiles_x + Map.tilesW ) ) ) ) )
                 {
                     alert("colidiu!");
                 }
