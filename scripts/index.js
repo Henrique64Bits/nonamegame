@@ -6,8 +6,22 @@
 var Map = {
     viewX: 0,
     viewY: 0,
-    tilesX: [],
-    tilesY: []
+    tiles: []
+}
+
+for( a in _tiles )
+{
+    for( i in _tiles[a] )
+    {
+        for( n in _tiles[a][i] )
+        {
+            Map.tiles[a] = [];
+            Map.tiles[a][i] = [];
+            Map.tiles[a][i][n] = _tiles[a][i][n];
+            Map.tilesH = canvas.width/a;
+            Map.tilesW = canvas.height/i;
+        }
+    }
 }
 
 var Player = {
