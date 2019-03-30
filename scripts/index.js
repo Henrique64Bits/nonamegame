@@ -120,10 +120,9 @@ function moviment()
 
 function jump()
 {
-    if( Player.jump_bol != true && Player.gravity != false )
+    if( Player.jump_bol == true && Player.gravity == false )
     {
         Player.jump_bol = true;
-        Player.gravity = false;
         
         if( Player.jump < 10 )
         {
