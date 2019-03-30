@@ -8,7 +8,8 @@ var Map = {
     viewY: 0,
     tiles: [],
     tilesW: 0,
-    tilesH: 0
+    tilesH: 0,
+    tiles_img: ["","res/tiles_0.png"]
 }
 
 var Player = {
@@ -155,6 +156,23 @@ function render()
     ctx.drawImage(img, 0,0, canvas.width, canvas.height);
     
     ctx.drawImage(Player.image, Player.x, Player.y, 30,70);
+    
+    for( a in Map.tiles )
+    {
+        for( i in Map.tiles[a] )
+        {
+            if( Map.tiles[a][i] == 0 )
+            {
+                //none
+            }
+            else if( Map.tiles[a][i] == 1 )
+            {
+                var tm = new Image();
+                tm.src = Map.tiles_img[1];
+                ctx.drawImage(tm, Map.tilesW*i, Map.tilesH*a, Map.tilesW, Map.tilesH);
+            }
+        }
+    }
 }
 
 function loop()
