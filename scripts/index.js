@@ -77,10 +77,10 @@ function keyDown( event )
     
     if( code == 37 )
     {
-        Player.velX = -5;
+        Player.velX = -7;
     } else if( code == 39 )
     {
-        Player.velX = 5;
+        Player.velX = 7;
     }
     if( code == 38 )
     {
@@ -129,7 +129,7 @@ function jump()
         if( Player.jump < 10 )
         {
             Player.gravity = false;
-            Player.jump += -5;
+            Player.jump += -7;
         } 
         else if( Player.jump >= 10 )
         {
@@ -145,7 +145,7 @@ function gravity()
 {
     if( Player.gravity == true )
     {
-        Player.y += 5;
+        Player.y += 10;
     }
 }
 
