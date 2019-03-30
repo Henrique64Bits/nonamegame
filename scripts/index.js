@@ -137,6 +137,9 @@ function jump()
             Player.gravity = true;
         }
     }
+    Player.jump = 0;
+    Player.jump_bol = false;
+    Player.gravity = true;
 }
 
 
