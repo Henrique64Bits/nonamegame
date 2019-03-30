@@ -1,14 +1,6 @@
 // background image: https://i.imgur.com/8WrImnw.png
 // bob image: https://i.imgur.com/SL6zT7u.png
 
-Events.keys.up( function() 
-{
-    alert("up");
-}, function() 
-{
-    alert("down");
-});
-
 // Variables
 
 var Map = {
@@ -30,6 +22,10 @@ var Player = {
 Player.image = new Image();
 Player.image.src = Player.src;
 
+
+
+
+
 var canvas = document.querySelector("#game_canvas");
 var ctx = canvas.getContext("2d");
 
@@ -42,6 +38,11 @@ var valor2 = parseInt(stylew2.substr(0,stylew2.search("px")));
 canvas.width = valor1;
 canvas.height = valor2;
 
+
+
+
+
+
 // Event adapters
 
 window.addEventListener("keydown", keyDown);
@@ -50,6 +51,11 @@ window.addEventListener("keyup", keyUp);
 // sla
 
 loop();
+
+
+
+
+
 
 // Key controls
 
@@ -84,6 +90,13 @@ function keyUp( event )
         Player.velX = 0;
     }
 }
+
+
+
+
+
+
+
 
 // mechanics functions
 
