@@ -186,6 +186,9 @@ function loop()
     requestAnimationFrame(loop, canvas);
     moviment();
     render();
-    jump();
     gravity();
+    if( Player.jump_bol == true )
+    {
+        jump();
+    }
 }
