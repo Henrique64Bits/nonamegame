@@ -165,11 +165,11 @@ function render()
             {
                 //none
             }
-            else if( Map.tiles[a][i] == 1 )
+            if( Map.tiles[a][i] == 1 )
             {
                 var tm = new Image();
                 tm.src = Map.tiles_img[1];
-                ctx.drawImage(tm, Map.tilesW*i, Map.tilesH*a, Map.tilesW, Map.tilesH);
+                ctx.drawImage(tm, Map.tilesW*i, Map.tilesH*a, 50, 50);
             }
         }
     }
