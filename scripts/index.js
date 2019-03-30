@@ -81,7 +81,6 @@ function keyDown( event )
     } else if( code == 38 )
     {
         Player.jump_bol = true;
-        Player.gravity = false;
     } else if( code == 39 )
     {
         Player.velX = 5;
@@ -98,7 +97,6 @@ function keyUp( event )
     } else if( code == 38 )
     {
         Player.jump_bol = false;
-        Player.gravity = true;
     } else if( code == 39 )
     {
         Player.velX = 0;
@@ -122,12 +120,11 @@ function moviment()
 
 function jump()
 {
-    if( Player.jump_bol == true && Player.gravity == false )
-    {
-        Player.jump_bol = true;
-        
+    if( Player.jump_bol == true )
+    {   
         if( Player.jump < 10 )
         {
+            Player.gravity = false;
             Player.jump += -5;
         } 
         else if( Player.jump >= 10 )
@@ -137,9 +134,6 @@ function jump()
             Player.gravity = true;
         }
     }
-    Player.jump = 0;
-    Player.jump_bol = false;
-    Player.gravity = true;
 }
 
 
