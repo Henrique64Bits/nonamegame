@@ -1,6 +1,14 @@
 // background image: https://i.imgur.com/8WrImnw.png
 // bob image: https://i.imgur.com/SL6zT7u.png
 
+Events.keys.up( function() 
+{
+    alert("up");
+}, function() 
+{
+    alert("down");
+});
+
 // Variables
 
 var Map = {
