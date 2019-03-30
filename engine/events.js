@@ -2,11 +2,6 @@
 var Events = {};
 Events.keys = {};
 
-// Adapters
-
-window.addEventListener("keydown", Events.keyPress);
-window.addEventListener("keyup", Events.keyReleased);
-
 // API functions
 
 Events.keyPress = function( def )
@@ -91,3 +86,8 @@ Events.keys.down = function( press, released )
         }
     });;
 }
+
+// Adapters
+
+window.addEventListener("keydown", Events.keyPress);
+window.addEventListener("keyup", Events.keyReleased);
