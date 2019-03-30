@@ -15,7 +15,7 @@ var Map = {
 var Player = {
     x: 100,
     y: 70,
-    src: "res/Bob.png",
+    src: "res/bob_0.png",
     velX: 0, 
     jump: 0,
     jump_bol: false,
@@ -169,7 +169,7 @@ function render()
             }
             if( Map.tiles[a][i] == 1 )
             {
-                tm[a][i].src = "res/tile_0.png";
+                tm[a][i].src = "res/tile_1.png";
                 ctx.drawImage(tm[a][i], Map.tilesW*i, Map.tilesH*a, Map.tilesW, Map.tilesH);
             }
         }
