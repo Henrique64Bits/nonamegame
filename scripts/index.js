@@ -149,6 +149,28 @@ function gravity()
     }
 }
 
+function collider( obj1, obj2 )
+{
+    if( ( obj1.x + obj1.width ) >= obj2.x )
+    {
+        return true;
+    }
+    else if( obj1.x <= ( obj2.x + obj2.width ) )
+    {
+        return true;
+    }
+    
+    if( ( obj1.y + obj1.height ) >= obj2.y )
+    {
+        return true;
+    }
+    else if( obj1.y <= ( obj2.y + obj2.height ) )
+    {
+        return true;
+    }
+    
+    return false;
+}
 
 // functions basic
 
@@ -177,10 +199,11 @@ function render()
                 tm[a][i].src = "res/tile_1.png";
                 ctx.drawImage(tm[a][i], Map.tilesW*i, Map.tilesH*a, Map.tilesW, Map.tilesH);
             }
-            /*if( ( Player.x >= Map.tilesW*i ) && ( Map( Player.y + Player.height ) >= ( Map.tilesH*a ) )
+            
+            if( collider(Player.image, tm[a][i]) == true )
             {
-                Player.gravity = false;
-            }*/
+                alert("colidiu!");
+            }
         }
     }
 }
