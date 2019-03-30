@@ -151,14 +151,14 @@ function gravity()
 
 function collider( obj1, obj2 )
 {
-    if( ( obj1.x + obj1.width ) >= obj2.x )
+    /*if( ( obj1.x + obj1.width ) >= obj2.x )
     {
         return true;
     }
     else if( obj1.x <= ( obj2.x + obj2.width ) )
     {
         return true;
-    }
+    }*/
     
     if( ( obj1.y + obj1.height ) >= obj2.y )
     {
