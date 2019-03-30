@@ -204,10 +204,10 @@ function render()
                 tm[a][i].src = "res/tile_1.png";
                 ctx.drawImage(tm[a][i], Map.tilesW*i, Map.tilesH*a, Map.tilesW, Map.tilesH);
                 
-                if( ( ( Player.y + Player.height ) >= Map.tiles_y ) && ( ( Player.x + Player.width ) >= Map.tiles_x ) && ( Player.x < ( Map.tiles_x + Map.tilesW ) ) ) ) )
+                /*if( ( ( Player.y + Player.height ) >= Map.tiles_y ) && ( ( Player.x + Player.width ) >= Map.tiles_x ) && ( Player.x < ( Map.tiles_x + Map.tilesW ) ) ) ) )
                 {
                     alert("colidiu!");
-                }
+                }*/
             }
            
         }
