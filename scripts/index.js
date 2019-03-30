@@ -157,19 +157,22 @@ function render()
     
     ctx.drawImage(Player.image, Player.x, Player.y, 30,70);
     
+    var tm = [];
+    
     for( a in Map.tiles )
     {
         for( i in Map.tiles[a] )
         {
+            tm[a] = [];
+            tm[a][i] = new Image();
             if( Map.tiles[a][i] == 0 )
             {
                 //none
             }
             if( Map.tiles[a][i] == 1 )
             {
-                var tm = new Image();
-                tm.src = Map.tiles_img[1];
-                ctx.drawImage(tm, Map.tilesW*i, Map.tilesH*a, 50, 50);
+                tm[a][i].src = "res/tile_0.png";
+                ctx.drawImage(tm[a][i], Map.tilesW*i, Map.tilesH*a, 50, 50);
             }
         }
     }
