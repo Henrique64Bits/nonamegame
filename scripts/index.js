@@ -190,6 +190,9 @@ function render()
         {
             tm[a] = [];
             tm[a][i] = new Image();
+            tm[a][i].x = Map.tilesW*i;
+            tm[a][i].y = Map.tilesH*a;
+                
             if( Map.tiles[a][i] == 0 )
             {
                 //none
@@ -198,6 +201,11 @@ function render()
             {
                 tm[a][i].src = "res/tile_1.png";
                 ctx.drawImage(tm[a][i], Map.tilesW*i, Map.tilesH*a, Map.tilesW, Map.tilesH);
+                
+                if( ( ( Player.y + Player.height ) >= tm[a][i].y ) && ( ( Player.x + Player.width ) >= tm[a][i].x ) && ( Player.x < ( tm[a][i].x + Map.tilesW*i ) ) ) ) )
+                {
+                    alert("colidiu!");
+                }
             }
            
         }
