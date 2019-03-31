@@ -60,10 +60,10 @@ var viewport = {
 
 for( a in _tiles )
 {
-    for( i in _tiles[a] )
-    {
-         Map.tiles[a] = _tiles[a];
-    }
+     for( i in _tiles[a] )
+     {
+          Map.tiles[a] = _tiles[a];
+     }
 }
 
 
@@ -82,36 +82,36 @@ loop();
 
 function render()
 {
-    var img = new Image();
-    img.src = "https://i.imgur.com/dUHek7i.png";
-    ctx.drawImage(img, 0,0, canvas.width, canvas.height);
+     var img = new Image();
+     img.src = "https://i.imgur.com/dUHek7i.png";
+     ctx.drawImage(img, 0,0, canvas.width, canvas.height);
     
-    ctx.drawImage(Player.image, Player.x, Player.y, Player.width,Player.height);
+     ctx.drawImage(Player.image, Player.x, Player.y, Player.width,Player.height);
     
-    var tm = [];
+     var tm = [];
     
-    for( a in Map.tiles )
-    {
-        for( i in Map.tiles[a] )
-        {
-            tm[a] = [];
-            tm[a][i] = new Image();
-            
-            Map.tiles_x[i] = Map.tilesW*i;
-            Map.tiles_y[a] = Map.tilesH*a;
-                
-            if( Map.tiles[a][i] == 0 )
-            {
-                //none
-            }
-            if( Map.tiles[a][i] == 1 )
-            {
-                tm[a][i].src = "res/tile_1.png";
-                ctx.drawImage(tm[a][i], 35*i, 35*a, 35,35);
-            }
+     for( a in Map.tiles )
+     {
+          for( i in Map.tiles[a] )
+          {
+               tm[a] = [];
+               tm[a][i] = new Image();
+              
+               Map.tiles_x[i] = Map.tilesW*i;
+               Map.tiles_y[a] = Map.tilesH*a;
+                 
+               if( Map.tiles[a][i] == 0 )
+               {
+                    //none
+               }
+               if( Map.tiles[a][i] == 1 )
+               {
+                   tm[a][i].src = "res/tile_1.png";
+                   ctx.drawImage(tm[a][i], 35*i, 35*a, 35,35);
+               }
            
-        }
-    }
+          }
+     }
 }
 
 
