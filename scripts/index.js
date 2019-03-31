@@ -79,7 +79,8 @@ function keyDown( event )
     }
     if( code == 38 )
     {
-        if( Player.jump > -20 )
+        Player.jump_bol = true;
+        /*if( Player.jump > -20 )
         {
             Player.jump_bol = true;3
             
@@ -95,7 +96,7 @@ function keyDown( event )
             Player.jump_bol = false;
             Player.gravity = true;
             Player.jump = 0;
-        }
+        }*/
     }
 }
 
@@ -137,19 +138,19 @@ function jump()
 {
     if( Player.jump_bol == true )
     {   
-        if( Player.jump > -20 )
+        if( Player.jump > -30 )
         {
             Player.gravity = false;
             Player.jump += -10;
             
-            if( Player.jump <= -20 )
+            if( Player.jump <= -30 )
             {
                 Player.jump_bol = false;
                 Player.gravity = true;
                 Player.jump = 0;
             }
         }
-        if( Player.jump <= -20 )
+        if( Player.jump <= -30 )
         {
             Player.jump_bol = false;
             Player.jump = 0;
