@@ -79,19 +79,22 @@ function keyDown( event )
     }
     if( code == 38 )
     {
-        if( Player.jump > -50 )
+        if( Player.jump > -20 )
         {
             Player.jump_bol = true;3
             
-            if( Player.jump <= -50 )
+            if( Player.jump <= -20 )
             {
                 Player.jump_bol = false;
                 Player.jump = 0;
                 Player.gravity = true;
             }
-        } else 
+        }
+        if( Player.jump <= -20 )
         {
             Player.jump_bol = false;
+            Player.gravity = true;
+            Player.jump = 0;
         }
     }
 }
