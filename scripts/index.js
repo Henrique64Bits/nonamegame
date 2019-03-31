@@ -194,7 +194,7 @@ function render()
             {
                 //none
             }
-            if( Map.tiles[a][i] == 1 )
+            if( Map.tiles[a][i] != 0 )
             {
                 tm[a][i].src = "res/tile_1.png";
                 ctx.drawImage(tm[a][i], Map.tilesW*i, Map.tilesH*a, Map.tilesW, Map.tilesH);
@@ -214,10 +214,9 @@ function colliders()
         {  
             if( Map.tiles[i][a] != 0 )
             {
-                if( Player.y + Player.height  >= Map.tiles_y[i] && Player.y < Map.tiles_y[i]+Map.tilesH  &&  Player.x + Player.width  >= Map.tiles_x[a]  &&  Player.x <  Map.tiles_x[a] + Map.tilesW )
+                if( Player.y + Player.height  > Map.tiles_y[i] && Player.y < Map.tiles_y[i]+Map.tilesH  &&  Player.x + Player.width  >= Map.tiles_x[a]  &&  Player.x <  Map.tiles_x[a] + Map.tilesW )
                 {
-                    Player.gravity = false;
-                    Player.y += 0;
+                    Player.y = ( (Map.tiles_y[i] - Player.height) );
                 }
             }
             
