@@ -94,7 +94,7 @@ function loop()
     var camX = clamp(-Player.x + canvas.width/2, 0, 700 - canvas.width);
     var camY = clamp(-Player.y + canvas.height/2, 0, 600 - canvas.height);
 
-    ctx.translate( camX, camY );
+    ctx.translate( Player.x, Player.y );
 }
 
 function clamp( value, min, max )
