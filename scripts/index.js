@@ -137,17 +137,23 @@ function jump()
 {
     if( Player.jump_bol == true )
     {   
-        if( Player.jump > -100 )
+        if( Player.jump > -20 )
         {
             Player.gravity = false;
             Player.jump += -10;
             
-            if( Player.jump <= -100 )
+            if( Player.jump <= -20 )
             {
                 Player.jump_bol = false;
                 Player.gravity = true;
                 Player.jump = 0;
             }
+        }
+        if( Player.jump <= -20 )
+        {
+            Player.jump_bol = false;
+            Player.jump = 0;
+            Player.gravity = true;
         }
     }
 }
