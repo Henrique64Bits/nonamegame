@@ -20,7 +20,8 @@ var Player = {
     velX: 0, 
     jump: 0,
     jump_bol: false,
-    gravity: true
+    gravity: true,
+    ground: false
 };
 Player.image = new Image();
 Player.image.src = Player.src;
@@ -117,19 +118,12 @@ function moviment()
 
 function jump()
 {
-    if( Player.jump_bol == true )
+    if( Player.jump_bol == true && Player.ground != false )
     {   
         if( Player.jump > -50 )
         {
             Player.gravity = false;
             Player.jump += -10;
-            
-            /*if( Player.jump <= -30 )
-            {
-                Player.jump_bol = false;
-                Player.gravity = true;
-                Player.jump = 0;
-            }*/
         }
         if( Player.jump <= -50 )
         {
@@ -198,6 +192,11 @@ function colliders()
                 if( Player.y + Player.height  > Map.tiles_y[i] && Player.y < Map.tiles_y[i]+Map.tilesH  &&  Player.x + Player.width  >= Map.tiles_x[a]  &&  Player.x <  Map.tiles_x[a] + Map.tilesW )
                 {
                     Player.y = ( (Map.tiles_y[i] - Player.height) );
+                    Player.ground = true;
+                }
+                else
+                {
+                    Player.ground = false;
                 }
             }
             
