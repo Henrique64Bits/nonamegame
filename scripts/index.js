@@ -170,6 +170,8 @@ function collider( obj1, obj2 )
 
 // functions basic
 
+var tm = [];
+
 function render()
 {
     var img = new Image();
@@ -178,7 +180,6 @@ function render()
     
     ctx.drawImage(Player.image, Player.x, Player.y, Player.width,Player.height);
     
-    var tm = [];
     
     for( a in Map.tiles )
     {
@@ -212,10 +213,20 @@ function colliders()
     {
         for( i in Map.tiles_y )
         {
-            if( Player.y + Player.height  >= Map.tiles_y[i] && Player.y < Map.tiles_y[i]+Map.tilesH  &&  Player.x + Player.width  >= Map.tiles_x[a]  &&  Player.x <  Map.tiles_x[a] + Map.tilesW )
+            for( j in Map.tiles )
             {
-                alert("colidiu!");
+                for( l in Map.tiles[j] )
+                {
+                    if( Map.tiles[i][a] != 0 )
+                    {
+                        if( Player.y + Player.height  >= Map.tiles_y[i] && Player.y < Map.tiles_y[i]+Map.tilesH  &&  Player.x + Player.width  >= Map.tiles_x[a]  &&  Player.x <  Map.tiles_x[a] + Map.tilesW )
+                        {
+                            alert("colidiu!");
+                        }
+                    }
+                }
             }
+            
         }
     }
 }
