@@ -170,8 +170,6 @@ function collider( obj1, obj2 )
 
 // functions basic
 
-var tm = [];
-
 function render()
 {
     var img = new Image();
@@ -180,6 +178,7 @@ function render()
     
     ctx.drawImage(Player.image, Player.x, Player.y, Player.width,Player.height);
     
+    var tm = [];
     
     for( a in Map.tiles )
     {
