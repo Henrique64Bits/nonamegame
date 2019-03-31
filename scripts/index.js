@@ -81,7 +81,14 @@ function keyDown( event )
     {
         if( Player.jump > -50 )
         {
-            Player.jump_bol = true;
+            Player.jump_bol = true;3
+            
+            if( Player.jump <= -50 )
+            {
+                Player.jump_bol = false;
+                Player.jump = 0;
+                Player.gravity = true;
+            }
         } else 
         {
             Player.jump_bol = false;
