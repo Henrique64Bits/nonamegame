@@ -80,23 +80,6 @@ function keyDown( event )
     if( code == 38 )
     {
         Player.jump_bol = true;
-        /*if( Player.jump > -20 )
-        {
-            Player.jump_bol = true;3
-            
-            if( Player.jump <= -20 )
-            {
-                Player.jump_bol = false;
-                Player.jump = 0;
-                Player.gravity = true;
-            }
-        }
-        if( Player.jump <= -20 )
-        {
-            Player.jump_bol = false;
-            Player.gravity = true;
-            Player.jump = 0;
-        }*/
     }
 }
 
@@ -113,9 +96,7 @@ function keyUp( event )
     }
     if( code == 38 )
     {
-        //Player.jump_bol = false;
-        //Player.jump = 0;
-        //Player.gravity = true;
+        // pass
     }
 }
 
@@ -138,19 +119,19 @@ function jump()
 {
     if( Player.jump_bol == true )
     {   
-        if( Player.jump > -30 )
+        if( Player.jump > -50 )
         {
             Player.gravity = false;
             Player.jump += -10;
             
-            if( Player.jump <= -30 )
+            /*if( Player.jump <= -30 )
             {
                 Player.jump_bol = false;
                 Player.gravity = true;
                 Player.jump = 0;
-            }
+            }*/
         }
-        if( Player.jump <= -30 )
+        if( Player.jump <= -50 )
         {
             Player.jump_bol = false;
             Player.jump = 0;
