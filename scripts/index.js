@@ -194,12 +194,11 @@ function colliders()
                     Player.y = ( (Map.tiles_y[i] - Player.height) );
                     Player.ground = true;
                 }
+                if( Player.y != ( (Map.tiles_y[i] - Player.height) ) )
+                {
+                    Player.ground = false;
+                }
             }
-            else 
-            {
-                Player.ground = false;
-            }
-            
         }
     }
 }
