@@ -174,7 +174,7 @@ function render()
             if( Map.tiles[a][i] == 1 )
             {
                 tm[a][i].src = "res/tile_1.png";
-                ctx.drawImage(tm[a][i], Map.tilesW*i, Map.tilesH*a, 50,50);
+                ctx.drawImage(tm[a][i], 50*i, 50*a, 50,50);
             }
            
         }
