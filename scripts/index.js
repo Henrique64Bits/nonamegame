@@ -88,8 +88,8 @@ function loop()
     
     colliders();
     
-    var camX = clamp(-Player.x + canvas.width/2, 0, 2000 - canvas.width);
-    var camY = clamp(-Player.y + canvas.height/2, -50, 2000 - canvas.height);
+    var camX = clamp(-Player.x + canvas.width/2, 0, 700 - canvas.width);
+    var camY = clamp(-Player.y + canvas.height/2, 0, 600 - canvas.height);
 
     ctx.translate( camX, camY );
 }
