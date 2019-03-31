@@ -217,6 +217,7 @@ function colliders()
                 if( Player.y + Player.height  >= Map.tiles_y[i] && Player.y < Map.tiles_y[i]+Map.tilesH  &&  Player.x + Player.width  >= Map.tiles_x[a]  &&  Player.x <  Map.tiles_x[a] + Map.tilesW )
                 {
                     Player.gravity = false;
+                    Player.y += 0;
                 }
             }
             
