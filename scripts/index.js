@@ -195,6 +195,10 @@ function colliders()
                     Player.ground = true;
                 }
             }
+            else 
+            {
+                Player.ground = false;
+            }
             
         }
     }
