@@ -11,6 +11,23 @@ var Map = {
     tiles_y: []
 }
 
+var Tiles = {
+    tiles_x: [],
+    tiles_y: [],
+    tiles_img: [],
+    tiles_w: [],
+    tiles_h: []
+}
+
+for( a in Tiles.tiles_img )
+{
+    Tiles.tiles_img[a] = [];
+    Tiles.tiles_x[a] = [];
+    Tiles.tiles_y[a] = [];
+    Tiles.tiles_w[a] = [];
+    Tiles.tiles_h[a] = [];
+}
+
 var Player = {
     x: 100,
     y: 70,
