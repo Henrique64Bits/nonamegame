@@ -22,14 +22,14 @@ var viewport = {
           this.offset[1] = Math.floor((this.screen[1]/2) - py);
           
           var tile = [
-               Math.floor(px/tileW),
-               Math.floor(py/tileH)
+               Math.floor(px/35),
+               Math.floor(py/35)
           ];
           
           this.startTile[0] = tile[0] - 1 -
-               Math.ceil((this.screen[0]/2) / tileW);
+               Math.ceil((this.screen[0]/2) / 35);
           this.startTile[1] = tile[1] - 1 -
-               Math.ceil((this.screen[1]/2) / tileH);
+               Math.ceil((this.screen[1]/2) / 35);
           
           if( this.startTile[0] < 0 )
           {
@@ -41,17 +41,17 @@ var viewport = {
           }
           
           this.endTile[0] = tile[0] + 1 +
-               Math.ceil((this.screen[0]/2) / tileW);
+               Math.ceil((this.screen[0]/2) / 35);
           this.endTile[1] = tile[1] + 1 +
-               Math.ceil((this.screen[1]/2) / tileH);
+               Math.ceil((this.screen[1]/2) / 35);
                
-          if( this.endTile[0] >= mapW )
+          if( this.endTile[0] >= Map.mapW )
           {
-               this.endTile[0] = mapW - 1;
+               this.endTile[0] = Map.mapW - 1;
           }
-          if( this.endTile[1] >= mapH )
+          if( this.endTile[1] >= Map.mapH )
           {
-               this.endTile[1] = mapH - 1;
+               this.endTile[1] = Map.mapH - 1;
           }
      }
 }
