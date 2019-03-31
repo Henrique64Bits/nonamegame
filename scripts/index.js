@@ -194,10 +194,6 @@ function colliders()
                     Player.y = ( (Map.tiles_y[i] - Player.height) );
                     Player.ground = true;
                 }
-                else
-                {
-                    Player.ground = false;
-                }
             }
             
         }
@@ -209,13 +205,16 @@ function loop()
     requestAnimationFrame(loop, canvas);
     moviment();
     render();
+    
     if( Player.gravity == true )
     {
         gravity();
     }
+    
     if( Player.jump_bol == true )
     {
         jump();
     }
+    
     colliders();
 }
