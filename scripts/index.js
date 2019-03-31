@@ -174,7 +174,7 @@ function render()
             if( Map.tiles[a][i] == 1 )
             {
                 tm[a][i].src = "res/tile_1.png";
-                ctx.drawImage(tm[a][i], 30*i, 30*a, 50,50);
+                ctx.drawImage(tm[a][i], 40*i, 40*a, 40,40);
             }
            
         }
@@ -189,7 +189,7 @@ function colliders()
         {  
             if( Map.tiles[i][a] != 0 )
             {
-                if( Player.y + Player.height  > Map.tiles_y[i] && Player.y < Map.tiles_y[i]+Map.tilesH  &&  Player.x + Player.width  >= Map.tiles_x[a]  &&  Player.x <  Map.tiles_x[a] + Map.tilesW )
+                if( Player.y + Player.height  > Map.tiles_y[i] && Player.y < Map.tiles_y[i]+40  &&  Player.x + Player.width  >= Map.tiles_x[a]  &&  Player.x <  Map.tiles_x[a] + 40 )
                 {
                     Player.y = ( (Map.tiles_y[i] - Player.height) );
                     Player.ground = true;
