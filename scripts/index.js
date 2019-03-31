@@ -79,7 +79,13 @@ function keyDown( event )
     }
     if( code == 38 )
     {
-        Player.jump_bol = true;
+        if( Player.jump > -50 )
+        {
+            Player.jump_bol = true;
+        } else 
+        {
+            Player.jump_bol = false;
+        }
     }
 }
 
