@@ -1,6 +1,3 @@
-// background image: https://i.imgur.com/8WrImnw.png
-// bob image: https://i.imgur.com/SL6zT7u.png
-
 // Variables
 
 var Map = {
@@ -45,13 +42,12 @@ canvas.width = valor1;
 canvas.height = valor2;
 
 
+
 for( a in _tiles )
 {
     for( i in _tiles[a] )
     {
          Map.tiles[a] = _tiles[a];
-         //Map.tiles[a][i] = _tiles[a][i];
-        
     }
 }
 
@@ -65,9 +61,6 @@ window.addEventListener("keyup", keyUp);
 // sla
 
 loop();
-
-
-
 
 
 
@@ -103,9 +96,9 @@ function keyUp( event )
     }
     if( code == 38 )
     {
-        Player.jump_bol = false;
-        Player.jump = 0;
-        Player.gravity = true;
+        //Player.jump_bol = false;
+        //Player.jump = 0;
+        //Player.gravity = true;
     }
 }
 
@@ -128,11 +121,18 @@ function jump()
 {
     if( Player.jump_bol == true )
     {   
-        if( Player.jump < 10 )
+        if( Player.jump > -100 )
         {
             Player.gravity = false;
             Player.jump += -10;
-        } 
+            
+            if( Player.jump <= -100 )
+            {
+                Player.jump_bol = false;
+                Player.gravity = true;
+                Player.jump = 0;
+            }
+        }
     }
 }
 
@@ -141,32 +141,11 @@ function gravity()
 {
     if( Player.gravity == true )
     {
-        Player.y += 15;
+        Player.y += 20;
     }
 }
 
-function collider( obj1, obj2 )
-{
-    /*if( ( obj1.x + obj1.width ) >= obj2.x )
-    {
-        return true;
-    }
-    else if( obj1.x <= ( obj2.x + obj2.width ) )
-    {
-        return true;
-    }*/
-    
-    if( ( obj1.y + obj1.height ) >= obj2.y )
-    {
-        return true;
-    }
-    /*else if( obj1.y <= ( obj2.y + obj2.height ) )
-    {
-        return true;
-    }*/
-    
-    return false;
-}
+
 
 // functions basic
 
@@ -194,12 +173,10 @@ function render()
             {
                 //none
             }
-            if( Map.tiles[a][i] != 0 )
+            if( Map.tiles[a][i] == 1 )
             {
                 tm[a][i].src = "res/tile_1.png";
                 ctx.drawImage(tm[a][i], Map.tilesW*i, Map.tilesH*a, Map.tilesW, Map.tilesH);
-                
-                /**/
             }
            
         }
