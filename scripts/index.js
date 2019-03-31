@@ -211,18 +211,12 @@ function colliders()
     for( a in Map.tiles_x )
     {
         for( i in Map.tiles_y )
-        {
-            for( j in Map.tiles )
+        {  
+            if( Map.tiles[i][a] != 0 )
             {
-                for( l in Map.tiles[j] )
+                if( Player.y + Player.height  >= Map.tiles_y[i] && Player.y < Map.tiles_y[i]+Map.tilesH  &&  Player.x + Player.width  >= Map.tiles_x[a]  &&  Player.x <  Map.tiles_x[a] + Map.tilesW )
                 {
-                    if( Map.tiles[i][a] != 0 )
-                    {
-                        if( Player.y + Player.height  >= Map.tiles_y[i] && Player.y < Map.tiles_y[i]+Map.tilesH  &&  Player.x + Player.width  >= Map.tiles_x[a]  &&  Player.x <  Map.tiles_x[a] + Map.tilesW )
-                        {
-                            alert("colidiu!");
-                        }
-                    }
+                    Player.gravity = false;
                 }
             }
             
