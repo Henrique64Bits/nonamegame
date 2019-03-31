@@ -73,10 +73,10 @@ function keyDown( event )
     
     if( code == 37 )
     {
-        Player.velX = -7;
+        Player.velX = -10;
     } else if( code == 39 )
     {
-        Player.velX = 7;
+        Player.velX = 10;
     }
     if( code == 38 )
     {
