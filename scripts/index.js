@@ -73,6 +73,8 @@ function render()
 function loop()
 {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
     requestAnimationFrame(loop, canvas);
     moviment();
     render();
