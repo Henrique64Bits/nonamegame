@@ -230,7 +230,10 @@ function loop()
     requestAnimationFrame(loop, canvas);
     moviment();
     render();
-    gravity();
+    if( Player.gravity == true )
+    {
+        gravity();
+    }
     if( Player.jump_bol == true )
     {
         jump();
