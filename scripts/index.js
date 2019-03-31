@@ -4,8 +4,8 @@ var Map = {
     viewX: 0,
     viewY: 0,
     tiles: [],
-    tilesW: 30,
-    tilesH: 30,
+    tilesW: 35,
+    tilesH: 35,
     tiles_img: ["","res/tiles_0.png"],
     tiles_x: [],
     tiles_y: []
@@ -174,7 +174,7 @@ function render()
             if( Map.tiles[a][i] == 1 )
             {
                 tm[a][i].src = "res/tile_1.png";
-                ctx.drawImage(tm[a][i], 40*i, 40*a, 40,40);
+                ctx.drawImage(tm[a][i], 35*i, 35*a, 35,35);
             }
            
         }
@@ -189,7 +189,7 @@ function colliders()
         {  
             if( Map.tiles[i][a] != 0 )
             {
-                if( Player.y + Player.height  > Map.tiles_y[i] && Player.y < Map.tiles_y[i]+40  &&  Player.x + Player.width  >= Map.tiles_x[a]  &&  Player.x <  Map.tiles_x[a] + 40 )
+                if( Player.y + Player.height  > Map.tiles_y[i] && Player.y < Map.tiles_y[i]+35  &&  Player.x + Player.width  >= Map.tiles_x[a]  &&  Player.x <  Map.tiles_x[a] + 35 )
                 {
                     Player.y = ( (Map.tiles_y[i] - Player.height) );
                     Player.ground = true;
