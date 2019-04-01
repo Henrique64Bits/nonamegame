@@ -156,9 +156,9 @@ function loop()
 {
     
     requestAnimationFrame(loop, canvas);
-    Player.spriteEvent();
     moviment();
     render();
+    Player.spriteEvent();
     
     if( Player.gravity == true )
     {
