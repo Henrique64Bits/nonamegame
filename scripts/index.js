@@ -91,6 +91,15 @@ function render()
      
     
      ctx.drawImage(Player.image, Player.x, Player.y, Player.width,Player.height);
+     
+     if( Player.runLeft == true )
+     {
+          Player.image.src = "res/bob/bob_1.gif";
+     }
+     if( Player.runRight == true )
+     {
+          Player.image.src = "res/bob/bob_0.gif";
+     }
     
      var tm = [];
     
