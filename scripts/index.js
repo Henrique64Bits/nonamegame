@@ -56,6 +56,7 @@ var viewport = {
      }
 }
 
+viewport.screen = [canvas.width, canvas.height];
 
 
 for( a in _tiles )
