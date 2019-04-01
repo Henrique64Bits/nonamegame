@@ -9,8 +9,8 @@ var Menu = {
                 Menu.title.src = "res/title_0.png";
                 ctx.drawImage(Menu.title, canvas.width/3, 50, 200, 70);
                 
-                ctx.font = "20px Kiwi";
-                ctx.fillText("Play Game", canvas.width/3, 200);
+                ctx.font = "15px Kiwi";
+                ctx.fillText("play game", canvas.width/2, 200);
                 
         }
 };
