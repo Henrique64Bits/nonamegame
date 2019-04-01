@@ -2,7 +2,7 @@ var Menu = {
         background : new Image(),
         main : function( canvas, ctx )
         {
-                Menu.background.src = "res/background_0.png";
+                Menu.background.src = "res/background_1.png";
                 ctx.drawImage(Menu.background, 0,0, canvas.width, canvas.height);
                 
                 Menu.title = new Image();
