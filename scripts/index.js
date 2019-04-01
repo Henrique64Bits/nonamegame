@@ -42,11 +42,6 @@ window.addEventListener("keyup", keyUp);
 
 // sla
 
-loop();
-
-
-// functions basic
-
 var _clouds = 3;
 
 Clouds.position[0] = [];
@@ -59,6 +54,11 @@ for( a = 0; a < _clouds; a++ )
      Clouds.sprite[a].src = "res/cloud_1.png";
      Clouds.position[a] = [160+(230*a), 150];
 }
+
+loop();
+
+
+// functions basic
 
 function render()
 {
