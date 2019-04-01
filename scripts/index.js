@@ -118,8 +118,6 @@ function render()
 
 function loop()
 {
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
     
     requestAnimationFrame(loop, canvas);
     moviment();
@@ -136,11 +134,9 @@ function loop()
     }
     
     colliders();
-    
-    var camX = clamp(-Player.x + canvas.width/2, 0, 700 - canvas.width);
-    var camY = clamp(-Player.y + canvas.height/2, 0, 600 - canvas.height);
-
-    ctx.translate( Player.x, Player.y );
+     
+    ctx.fillStyle = "#000000";
+    ctx.fillRect(0, 0, viewport.screen[0], viewport.screen[1]);
 }
 
 function clamp( value, min, max )
