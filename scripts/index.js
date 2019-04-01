@@ -71,6 +71,14 @@ function render()
      Clouds.position[1][0] += -3;
      Clouds.position[2][0] += -3;
      
+     for( a = 0; a < _clouds; a++ )
+     {
+          if( Clouds.position[a][0] <= -100 )
+          {
+               Clouds.position[a][0] = Clouds.position[a][0]+500;
+          }
+     }
+     
      ctx.drawImage(Clouds.sprite[0], Clouds.position[0][0],Clouds.position[0][1], Clouds.dims[0], Clouds.dims[1]);
      ctx.drawImage(Clouds.sprite[1], Clouds.position[1][0],Clouds.position[1][1], Clouds.dims[0], Clouds.dims[1]);
      ctx.drawImage(Clouds.sprite[2], Clouds.position[2][0],Clouds.position[2][1], Clouds.dims[0], Clouds.dims[1]);
