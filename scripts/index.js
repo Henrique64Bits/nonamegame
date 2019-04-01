@@ -89,16 +89,28 @@ function render()
           Clouds.position[2][0] = (Clouds.position[2][0]*3+canvas.width)+(canvas.width+200);
      }
      
-    
+     Player.image.src = Player.src[Player.src_count[0]][Player.src_count[1]];
      ctx.drawImage(Player.image, Player.x, Player.y, Player.width,Player.height);
      
      if( Player.runLeft == true )
      {
-          Player.image.src = "res/bob/bob_1.gif";
+          Player.src_count[0] = 1;
+          Player.src_count[1]++;
+          
+          if( Player.src_count[1] > 2 )
+          {
+               Player.src_count[1] = 0;
+          }
      }
      if( Player.runRight == true )
      {
-          Player.image.src = "res/bob/bob_0.gif";
+          Player.src_count[0] = 0;
+          Player.src_count[1]++;
+          
+          if( Player.src_count[1] > 2 )
+          {
+               Player.src_count[1] = 0;
+          }
      }
     
      var tm = [];
