@@ -55,12 +55,12 @@ function render()
      
      var _clouds = 3;
      
-     for( a in _clouds )
+     for( a = 0; a < _clouds; a++ )
      {
           Clouds.position[a] = [];
           Clouds.sprite[a] = new Image();
           Clouds.sprite[a].src = "res/cloud_1.png";
-          Clouds.position[a] = [200*a, 100];
+          Clouds.position[a] = [400*a, 100];
           ctx.drawImage(Clouds.sprite[a], Clouds.position[a][0],Clouds.position[a][1], Clouds.dims[0], Clouds.dims[1]);
           Clouds.position[a][0] += -3;
      }
