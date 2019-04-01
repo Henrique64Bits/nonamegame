@@ -21,7 +21,7 @@ Background.dims = [canvas.width, canvas.height];
 var Clouds = {
      sprite : [],
      position : [],
-     dims : [255, 173]
+     dims : [155, 67]
 }
 
 
