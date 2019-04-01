@@ -5,11 +5,11 @@ function keyDown( event )
     if( code == 37 )
     {
         Player.velX = -10;
-        Player.image.src = "res/bob/bob_0.gif";
+        Player.image.src = "res/bob/bob_1.gif";
     } else if( code == 39 )
     {
         Player.velX = 10;
-        Player.image.src = "res/bob/bob_1.gif";
+        Player.image.src = "res/bob/bob_0.gif";
     }
     if( code == 38 )
     {
@@ -24,11 +24,11 @@ function keyUp( event )
     if( code == 37 )
     {
         Player.velX = 0;
-        Player.image.src = "res/bob/bob_0.png";
+        Player.image.src = "res/bob/bob_1.png";
     } else if( code == 39 )
     {
         Player.velX = 0;
-        Player.image.src = "res/bob/bob_1.png";
+        Player.image.src = "res/bob/bob_0.png";
     }
     if( code == 38 )
     {
