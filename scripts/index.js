@@ -156,6 +156,7 @@ function loop()
 {
     
     requestAnimationFrame(loop, canvas);
+    Player.spriteEvent();
     moviment();
     render();
     
@@ -170,5 +171,4 @@ function loop()
     }
     
     colliders();
-    Player.spriteEvent();
 }
