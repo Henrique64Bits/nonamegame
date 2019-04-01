@@ -5,7 +5,7 @@ function keyDown( event )
     if( code == 37 )
     {
         Player.velX = -10;
-        PLayer.running = true;
+        Player.running = true;
     } else if( code == 39 )
     {
         Player.velX = 10;
