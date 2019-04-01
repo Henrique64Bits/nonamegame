@@ -7,13 +7,13 @@ function keyDown( event )
         Player.velX = -10;
         var gif  = GIF();
         gif.load("res/bob/bob_1.gif");
-        Player.image = gif.image;
+        Player.image.src = gif.image;
     } else if( code == 39 )
     {
         Player.velX = 10;
         var gif  = GIF();
         gif.load("res/bob/bob_0.gif");
-        Player.image = gif.image;
+        Player.image.src = gif.image;
     }
     if( code == 38 )
     {
