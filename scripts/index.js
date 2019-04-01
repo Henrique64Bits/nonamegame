@@ -21,7 +21,7 @@ Background.dims = [canvas.width, canvas.height];
 var Clouds = {
      sprite : [],
      position : [],
-     dims : [155, 67]
+     dims : [195, 87]
 }
 
 
@@ -60,8 +60,11 @@ function render()
           Clouds.position[a] = [];
           Clouds.sprite[a] = new Image();
           Clouds.sprite[a].src = "res/cloud_1.png";
-          Clouds.position[a] = [155+(155*a), 100];
+          Clouds.position[a] = [160+(230*a), 150];
           ctx.drawImage(Clouds.sprite[a], Clouds.position[a][0],Clouds.position[a][1], Clouds.dims[0], Clouds.dims[1]);
+     }
+     for( a in Clouds.position )
+     {
           Clouds.position[a][0] += -3;
      }
     
