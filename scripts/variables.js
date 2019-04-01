@@ -38,7 +38,8 @@ var Player = {
                 jump: 0,
                 jump_bol: false,
                 gravity: true,
-                ground: false
+                ground: false,
+                running: false
 };
 Player.image = new Image();
 Player.image.src = Player.src;
