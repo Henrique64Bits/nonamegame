@@ -25,11 +25,6 @@ var Clouds = {
 }
 Clouds.sprite.src = "res/cloud_1.png";
 
-for( a in position )
-{
-     position[a] = [];
-}
-
 
 for( a in _tiles )
 {
@@ -63,9 +58,10 @@ function render()
      
      for( a in _clouds )
      {
+          Clouds.position[a] = [];
           Clouds.position[a] = [200*a, 100];
-          ctx.drawImage(Clouds.sprite, Clouds.postion[a][0],Clouds.position[a][1], Clouds.dims[0], Clouds.dims[1]);
-          Clouds.postion[a][0] -= 3;
+          ctx.drawImage(Clouds.sprite, Clouds.position[a][0],Clouds.position[a][1], Clouds.dims[0], Clouds.dims[1]);
+          Clouds.position[a][0] -= 3;
      }
     
      ctx.drawImage(Player.image, Player.x, Player.y, Player.width,Player.height);
