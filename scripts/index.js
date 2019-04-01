@@ -61,12 +61,16 @@ function render()
           Clouds.sprite[a] = new Image();
           Clouds.sprite[a].src = "res/cloud_1.png";
           Clouds.position[a] = [160+(230*a), 150];
-          ctx.drawImage(Clouds.sprite[a], Clouds.position[a][0],Clouds.position[a][1], Clouds.dims[0], Clouds.dims[1]);
      }
-     for( a in Clouds.position )
-     {
-          Clouds.position[a][0] += -3;
-     }
+     
+     Clouds.position[0][0] += -3;
+     Clouds.position[1][0] += -3;
+     Clouds.position[2][0] += -3;
+     
+     ctx.drawImage(Clouds.sprite[0], Clouds.position[0][0],Clouds.position[0][1], Clouds.dims[0], Clouds.dims[1]);
+     ctx.drawImage(Clouds.sprite[1], Clouds.position[1][0],Clouds.position[1][1], Clouds.dims[0], Clouds.dims[1]);
+     ctx.drawImage(Clouds.sprite[2], Clouds.position[2][0],Clouds.position[2][1], Clouds.dims[0], Clouds.dims[1]);
+     
     
      ctx.drawImage(Player.image, Player.x, Player.y, Player.width,Player.height);
     
