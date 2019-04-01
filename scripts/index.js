@@ -60,6 +60,43 @@ loop();
 
 // functions basic
 
+Player.spriteEvent = function()
+{
+     Player.image.src = "res/bob/bob_0.png";
+     
+     var FPS = 7;
+     var _fps_count = 0;
+     var _tick = 0;
+     
+     if( _fps_count == 1 )
+     {
+          Player.image.src = "res/bob/bob_0-1.png";
+     }
+     if( _fps_count == 2 )
+     {
+          Player.image.src = "res/bob/bob_0.png";
+     }
+     if( _fps_count == 3 )
+     {
+          Player.image.src = "res/bob_0-2.png";
+     }
+     
+     if( Player.running == true )
+     {
+          _tick++;
+          
+          if( _tick >= FPS )
+          {
+               _fps_count++;
+               _tick = 0;
+          }
+          if( _fps_count > 3 )
+          {
+               _fps_count = 0;
+          }
+     }
+}
+
 function render()
 {
      var img = new Image();
@@ -133,4 +170,5 @@ function loop()
     }
     
     colliders();
+    Player.spriteEvent();
 }
