@@ -81,11 +81,11 @@ function render()
      }
      if( Clouds.position[1][0] <= -190 )
      {
-          Clouds.position[1][0] = (Clouds.position[1][0]*3+canvas.width)+canvas.width/2;
+          Clouds.position[1][0] = (Clouds.position[1][0]*3+canvas.width)+canvas.width/2);
      }
      if( Clouds.position[2][0] <= -190 )
      {
-          Clouds.position[2][0] = (Clouds.position[2][0]*3+canvas.width)+canvas.width/2;
+          Clouds.position[2][0] = (Clouds.position[2][0]*3+canvas.width)+canvas.width/2);
      }
      
     
