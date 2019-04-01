@@ -33,7 +33,7 @@ var Player = {
                 y: 70,
                 width: 30,
                 height: 70,
-                src: "res/bob_0.png",
+                src: "res/bob/bob_0.png",
                 velX: 0, 
                 jump: 0,
                 jump_bol: false,
