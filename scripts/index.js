@@ -47,21 +47,25 @@ loop();
 
 // functions basic
 
+var _clouds = 3;
+
+Clouds.position[0] = [];
+Clouds.position[1] = [];
+Clouds.position[2] = [];
+
+for( a = 0; a < _clouds; a++ )
+{
+     Clouds.sprite[a] = new Image();
+     Clouds.sprite[a].src = "res/cloud_1.png";
+     Clouds.position[a] = [160+(230*a), 150];
+}
+
 function render()
 {
      var img = new Image();
      img.src = "res/background_1.png";
      ctx.drawImage(img, 0,0, canvas.width, canvas.height);
      
-     var _clouds = 3;
-     
-     for( a = 0; a < _clouds; a++ )
-     {
-          Clouds.position[a] = [];
-          Clouds.sprite[a] = new Image();
-          Clouds.sprite[a].src = "res/cloud_1.png";
-          Clouds.position[a] = [160+(230*a), 150];
-     }
      
      Clouds.position[0][0] += -3;
      Clouds.position[1][0] += -3;
