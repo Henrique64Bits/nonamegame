@@ -10,6 +10,21 @@ var valor2 = parseInt(stylew2.substr(0,stylew2.search("px")));
 canvas.width = valor1;
 canvas.height = valor2;
 
+var Background = {
+     background : new Image(),
+     position : [0,0],
+     dims : [0,0]
+}
+Background.background.src = "res/background_1.png";
+Background.dims = [canvas.width, canvas.height];
+
+var Clouds = {
+     sprite : new Image(),
+     position : [],
+     dims : []
+}
+Clouds.sprite.src = "res/cloud_1.png";
+
 
 for( a in _tiles )
 {
