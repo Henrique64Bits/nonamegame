@@ -9,7 +9,7 @@ function keyDown( event )
     } else if( code == 39 )
     {
         Player.velX = 10;
-        Player.image.src = "";
+        Player.image.src = "https://raw.githubusercontent.com/Henrique64Bits/nonamegame/master/res/bob/bob_0.gif";
     }
     if( code == 38 )
     {
