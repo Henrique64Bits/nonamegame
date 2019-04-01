@@ -146,10 +146,11 @@ function loop()
     
     requestAnimationFrame(loop, canvas);
     moviment();
-    if( _screen == "game" )
+    if( _scene == "game" )
     {
           render();
-    } else if( _screen == "menu" )
+    }
+    if( _scene == "menu" )
     {
          Menu.main(canvas, ctx);
     }
