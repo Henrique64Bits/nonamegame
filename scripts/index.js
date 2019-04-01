@@ -84,10 +84,10 @@ loop();
 function render()
 {
      var img = new Image();
-     img.src = "https://i.imgur.com/dUHek7i.png";
+     img.src = "res/background_1.png";
      ctx.drawImage(img, 0,0, canvas.width, canvas.height);
     
-     ctx.drawImage(Player.image, viewport.offset[0] + Player.x, viewport.offset[1] + Player.y, Player.width,Player.height);
+     ctx.drawImage(Player.image, Player.x, Player.y, Player.width,Player.height);
     
      var tm = [];
     
@@ -108,7 +108,7 @@ function render()
                if( Map.tiles[a][i] == 1 )
                {
                    tm[a][i].src = "res/tile_1.png";
-                   ctx.drawImage(tm[a][i], viewport.offset[0] + (35*i), viewport.offset[1] + (35*a), 35,35);
+                   ctx.drawImage(tm[a][i], 35*i, 35*a, 35,35);
                }
            
           }
@@ -135,11 +135,6 @@ function loop()
     }
     
     colliders();
-     
-    ctx.fillStyle = "#000000";
-    ctx.fillRect(0, 0, viewport.screen[0], viewport.screen[1]);
-     
-    viewport.update(Player.x + (player.width/2), Player.y + (player.height/2));
 }
 
 function clamp( value, min, max )
