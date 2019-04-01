@@ -138,6 +138,8 @@ function loop()
      
     ctx.fillStyle = "#000000";
     ctx.fillRect(0, 0, viewport.screen[0], viewport.screen[1]);
+     
+    viewport.update(Player.x + (player.width/2), Player.y + (player.height/2));
 }
 
 function clamp( value, min, max )
