@@ -33,14 +33,14 @@ var Player = {
                 y: 70,
                 width: 30,
                 height: 70,
-                src: "res/bob/bob_0.png",
-                velX: 0, 
+                src: [["res/bob/bob_0-1.png","res/bob/bob_0.png","res/bob/bob_0-2"], ["res/bob/bob_1-1.png","res/bob/bob_1.png","res/bob/bob_1-2"]],
+                velX: 0,
                 jump: 0,
                 jump_bol: false,
                 gravity: true,
                 ground: false,
-                running: false,
-                runLeft: false, runRight: false
+                runLeft: false, runRight: false,
+                src_count: [0, 1]
 };
 Player.image = new Image();
-Player.image.src = Player.src;
+Player.image.src = Player.src[Player.src_count[0]][Player.src_count[1]];
