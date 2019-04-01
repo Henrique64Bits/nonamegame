@@ -5,15 +5,11 @@ function keyDown( event )
     if( code == 37 )
     {
         Player.velX = -10;
-        var gif  = GIF();
-        gif.load("res/bob/bob_1.gif");
-        Player.image.src = gif.image;
+        Player.image.src = "https://raw.githubusercontent.com/Henrique64Bits/nonamegame/master/res/bob/bob_1.gif";
     } else if( code == 39 )
     {
         Player.velX = 10;
-        var gif  = GIF();
-        gif.load("res/bob/bob_0.gif");
-        Player.image.src = gif.image;
+        Player.image.src = "";
     }
     if( code == 38 )
     {
