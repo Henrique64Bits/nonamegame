@@ -5,13 +5,15 @@ function keyDown( event )
     if( code == 37 )
     {
         Player.velX = -10;
-        Player.image = GIF();
-        Player.image.load = "res/bob/bob_1.gif";
+        var gif  = GIF();
+        gif.load("res/bob/bob_1.gif");
+        Player.image = gif.image;
     } else if( code == 39 )
     {
         Player.velX = 10;
-        Player.image = GIF();
-        Player.image.load = "res/bob/bob_0.gif";
+        var gif  = GIF();
+        gif.load("res/bob/bob_0.gif");
+        Player.image = gif.image;
     }
     if( code == 38 )
     {
