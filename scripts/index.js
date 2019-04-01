@@ -7,6 +7,8 @@ var valor1 = parseInt(stylew1.substr(0,stylew1.search("px")));
 var stylew2 = window.getComputedStyle(canvas).height;
 var valor2 = parseInt(stylew2.substr(0,stylew2.search("px")));
 
+var _scene = "menu";
+
 canvas.width = valor1;
 canvas.height = valor2;
 
@@ -144,7 +146,13 @@ function loop()
     
     requestAnimationFrame(loop, canvas);
     moviment();
-    render();
+    if( _screen == "game" )
+    {
+          render();
+    } else if( _screen == "menu" )
+    {
+         Menu.main(canvas, ctx);
+    }
     
     if( Player.gravity == true )
     {
