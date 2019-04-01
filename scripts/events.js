@@ -5,11 +5,11 @@ function keyDown( event )
     if( code == 37 )
     {
         Player.velX = -10;
-        Player.image.src = "https://raw.githubusercontent.com/Henrique64Bits/nonamegame/master/res/bob/bob_1.gif";
+        Player.runLeft = true;
     } else if( code == 39 )
     {
         Player.velX = 10;
-        Player.image.src = "https://raw.githubusercontent.com/Henrique64Bits/nonamegame/master/res/bob/bob_0.gif";
+        Player.runRight = true;
     }
     if( code == 38 )
     {
@@ -24,11 +24,11 @@ function keyUp( event )
     if( code == 37 )
     {
         Player.velX = 0;
-        //Player.image.src = "res/bob/bob_1.png";
+        Player.runLeft = false;
     } else if( code == 39 )
     {
         Player.velX = 0;
-        //Player.image.src = "res/bob/bob_0.png";
+        Player.runRight = false;
     }
     if( code == 38 )
     {
