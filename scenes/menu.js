@@ -9,7 +9,7 @@ var Menu = {
                 Menu.title.src = "res/title_0.png";
                 ctx.drawImage(Menu.title, canvas.width/3, 50, 200, 70);
                 
-                ctx.font = "30px Arial";
+                ctx.font = "20px Kiwi";
                 ctx.fillText("Play Game", canvas.width/3, 200);
                 
         }
