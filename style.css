@@ -1,7 +1,13 @@
+@font-face {
+    font-family: Kiwi;
+    src: url("fonts/kiwi/kiwi.ttf");
+}
+
 body {
     background-color: black;
     overflow-x: hidden;
     overflow-y: hidden;
+    font-family: Kiwi;
 }
 
 canvas#game_canvas {
