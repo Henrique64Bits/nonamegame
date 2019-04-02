@@ -39,7 +39,7 @@ var Level_1 = {
                 for( a in Level_1.map.clouds.position )
                 {
                         Level_1.map.clouds.position[a][0] += -3;
-                        ctx.drawImage(Level_1.map.clouds.sprite[a], Level_1.map.clouds.position[a][0], Level_1.map.clouds.position[a][1], Level_1.map.cl);
+                        ctx.drawImage(Level_1.map.clouds.sprite[a], Level_1.map.clouds.position[a][0], Level_1.map.clouds.position[a][1], Level_1.map.clouds.dims[a][0], Level_1.map.clouds.dims[a][1]);
                         
                         if( Level_1.map.clouds.position[a][0] <= -190 )
                         {
