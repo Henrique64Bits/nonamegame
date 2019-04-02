@@ -10,7 +10,7 @@ var Menu = {
                 ctx.drawImage(Menu.title, canvas.width/3, 50, 200, 70);
                 
                 ctx.font = "15px Kiwi";
-                ctx.fillText("play game", canvas.width/2, 200);
+                ctx.fillText("play game", canvas.width/2.5, 200);
                 
         }
 };
