@@ -2,9 +2,9 @@ var Player = {
         position : [0,0],
         dims : [70,100],
         vel : [0,0],
-        gravity : true,
-        jump : false,
-        ground : false,
+        _gravity : true,
+        _jump : false,
+        _ground : false,
         sprite : new Image(),
         src : [["res/bob/bob_1-2.png", "res/bob/bob_1.png", "res/bob/bob_1-1.png"], 
                ["res/bob/bob_0-2.png", "res/bob/bob_0.png", "res/bob/bob_0-1.png"]],
@@ -16,20 +16,28 @@ var Player = {
                 Player.position[1] += Player.vel[1];
         },
         
+        gravity : function()
+        {
+                if( Player._gravity == true )
+                {
+                        Player.vel[1] += 10;
+                }
+        },
+        
         jump : function()
         {
-                if( Player.jump == true )
+                if( Player._jump == true )
                 {
                         if( Player.vel[1] > -50 )
                         {
-                                Player.gravity = false;
+                                Player._gravity = false;
                                 Player.vel[1] += -10;
                         }
                         if( Player.vel[1] <= -50 )
                         {
-                                Player.jump = false;
+                                Player._jump = false;
                                 Player.vel[1] = 0;
-                                Player.gravity = true;
+                                Player._gravity = true;
                         }
                 }
         },
