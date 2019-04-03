@@ -37,6 +37,14 @@ var Menu = {
                                 Menu.select = 1;
                         }
                 }
+                
+                if( code == 13 )
+                {
+                        if( Menu.select == 0 )
+                        {
+                                _scene = "level_1";
+                        }
+                }
         },
         keyUp : function( e )
         {
