@@ -1,11 +1,42 @@
 var Menu = {
         background : new Image(),
+        selects : ["play", "controlls", "options"],
+        select : 0,
         
         keyDown : function( e )
         {
                 var code = e.keyCode;
                 
-                alert("tecla : "+code);
+                if( code == 83 || code == 40 )
+                {
+                        if( Menu.select == 0 )
+                        {
+                                Menu.select = 1;
+                        } 
+                        else if( Menu.select == 1 )
+                        {
+                                Menu.select = 2;
+                        }
+                        else if( Menu.select == 2 )
+                        {
+                                Menu.select = 0;
+                        }
+                }
+                if( code == 87 || code == 38 )
+                {
+                        if( Menu.select == 0 )
+                        {
+                                Menu.select = 2;
+                        } 
+                        else if( Menu.select == 1 )
+                        {
+                                Menu.select = 0;
+                        }
+                        else if( Menu.select == 2 )
+                        {
+                                Menu.select = 1;
+                        }
+                }
         },
         keyUp : function( e )
         {
@@ -20,8 +51,17 @@ var Menu = {
                 Menu.title.src = "res/title_0.png";
                 ctx.drawImage(Menu.title, canvas.width/3, 50, 200, 70);
                 
-                ctx.font = "15px Kiwi";
-                ctx.fillText("play game", canvas.width/2.4, 200);
+                if( Menu.select == 0 )
+                {
+                        ctx.font = "13px Kiwi";
+                        ctx.fillText("play game", canvas.width/2.4, 200);
+                }
+                else
+                {
+                        ctx.font = "15px Kiwi";
+                        ctx.fillText("play game", canvas.width/2.4, 200);
+                }
+                
                 
         }
 };
