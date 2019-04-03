@@ -16,8 +16,8 @@ canvas.height = valor2;
 
 // Event adapters
 
-window.addEventListener("keydown", keyDown);
-window.addEventListener("keyup", keyUp);
+//window.addEventListener("keydown", keyDown);
+//window.addEventListener("keyup", keyUp);
 
 
 Level_1.main(canvas, ctx);
@@ -50,4 +50,10 @@ function loop()
 {
     requestAnimationFrame(loop, canvas);
     render();
+     
+    if( _scene == "menu" )
+    {
+         window.addEventListener("keydown", Menu.keyDown);
+         window.addEventListener("keyup", Menu.keyUp);
+    }
 }
