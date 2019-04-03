@@ -19,6 +19,8 @@ var Tiles = {
                 tiles_h         : []
 }
 
+var Blocks = ["", "res/tile_1.png", ""];
+
 for( a in Tiles.tiles_img )
 {
                 Tiles.tiles_img[a] = [];
