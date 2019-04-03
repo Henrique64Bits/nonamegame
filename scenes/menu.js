@@ -1,5 +1,16 @@
 var Menu = {
         background : new Image(),
+        
+        keyDown : function( e )
+        {
+                var code = e.keyCode;
+                
+                alert("tecla : "+code);
+        },
+        keyUp : function( e )
+        {
+                var code = e.keyCode;
+        },
         main : function( canvas, ctx )
         {
                 Menu.background.src = "res/background_1.png";
