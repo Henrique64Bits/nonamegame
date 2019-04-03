@@ -19,7 +19,16 @@ var Tiles = {
                 tiles_h         : []
 }
 
-var Blocks = ["", "res/tile_1.png", ""];
+var Blocks = [
+                {
+                                sprite : "",
+                                dims : []
+                },
+                {
+                                sprite : "res/tile_1.png",
+                                dims : [30, 30]
+                }
+];
 
 for( a in Tiles.tiles_img )
 {
