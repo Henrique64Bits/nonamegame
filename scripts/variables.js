@@ -8,3 +8,5 @@ var Blocks = [
                                 dims : [30, 30]
                 }
 ];
+
+var _scene = "menu";
