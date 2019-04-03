@@ -53,12 +53,12 @@ var Menu = {
                 
                 if( Menu.select == 0 )
                 {
-                        ctx.font = "13px Kiwi";
+                        ctx.font = "15px Kiwi";
                         ctx.fillText("play game", canvas.width/2.4, 200);
                 }
                 else
                 {
-                        ctx.font = "15px Kiwi";
+                        ctx.font = "13px Kiwi";
                         ctx.fillText("play game", canvas.width/2.4, 200);
                 }
                 
