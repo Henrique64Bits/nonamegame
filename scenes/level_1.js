@@ -28,10 +28,13 @@ var Level_1 = {
         keyDown : function( e )
         {
                 var code = e.keyCode;
+                
+                Player.keyDown(e);
         },
         keyUp : function( e )
         {
                 var code = e.keyCode;
+                Player.keyUp(e);
         },
         
         main : function( canvas, ctx )
@@ -51,6 +54,9 @@ var Level_1 = {
                 ctx.drawImage(Level_1.map.background, 0,0, canvas.width, canvas.height);
                 
                 Player.update(canvas,ctx);
+                Player.gravity();
+                Player.jump();
+                Player.moviment();
                 
                 for( a in Level_1.map.clouds.position )
                 {
