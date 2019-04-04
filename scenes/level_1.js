@@ -56,13 +56,12 @@ var Level_1 = {
                 Player.moviment();
                 Player.colliders(Level_1.map.tiles);
                 
-                
-                if( Player.position[0] >= canvas.width/2 && Player.vel[0] > 0 )
+                if( Player.vel[0] >0 && Player.position[0] >= canvas.width/2 )
                 {
-                        Level_1.map.x--;
+                        var xx = 0;
+                        xx--;
+                        ctx.translate(xx, 0);
                 }
-                
-                
 
                 var tm = new Image();
                 tm.src = "res/tile_1.png";
