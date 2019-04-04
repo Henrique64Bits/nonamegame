@@ -49,7 +49,7 @@ var Level_1 = {
                 Player.jump();
                 Player.moviment();
                 
-                ctx.fillRect(10,10, 70,20);
+                //ctx.fillRect(10,10, 70,20);
                 
                 var tm = [];
                 
@@ -62,7 +62,7 @@ var Level_1 = {
                                 {
                                         tm[y][x] = new Image();
                                         tm[y][y].src = "res/tile_1.png";
-                                        ctx.drawImage(tm[y][x], 30*x, 30*y, 30,30);
+                                        ctx.drawImage(tm[y][x], 50*x, 50*y, 50,50);
                                 }
                         }
                 }
