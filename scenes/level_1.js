@@ -28,7 +28,6 @@ var Level_1 = {
         keyDown : function( e )
         {
                 var code = e.keyCode;
-                
                 Player.keyDown(e);
         },
         keyUp : function( e )
@@ -39,21 +38,6 @@ var Level_1 = {
         
         main : function( canvas, ctx )
         {
-                 this.map.clouds.sprite[0] = new Image();
-                 this.map.clouds.sprite[0].src = "res/cloud_1.png";
-                 this.map.clouds.position[0] = [160+(230*0), 150];
-                
-                 this.map.clouds.sprite[1] = new Image();
-                 this.map.clouds.sprite[1].src = "res/cloud_1.png";
-                 this.map.clouds.position[1] = [160+(230*1), 150];
-                
-                 this.map.clouds.sprite[2] = new Image();
-                 this.map.clouds.sprite[2].src = "res/cloud_1.png";
-                 this.map.clouds.position[2] = [160+(230*2), 150];
-                
-                 this.map.clouds.sprite[3] = new Image();
-                 this.map.clouds.sprite[3].src = "res/cloud_1.png";
-                 this.map.clouds.position[3] = [160+(230*3), 150];
         },
         loop : function( canvas, ctx )
         {
@@ -65,21 +49,21 @@ var Level_1 = {
                 Player.jump();
                 Player.moviment();
                 
-                for( a = 0; a < 3; a++  )
+                var tm = [];
+                
+                for( y in Level_1.map.tiles )
                 {
-                        this.map.clouds.position[a][0] += -3;
-                        ctx.drawImage(this.map.clouds.sprite[a], this.map.clouds.position[a][0], this.map.clouds.position[a][1], this.map.clouds.dims[a][0], this.map.clouds.dims[a][1]);
-                        
-                        if( this.map.clouds.position[a][0] <= -190 )
+                        for( x in Level_1.map.tiles[y] )
                         {
-                                this.map.clouds.position[a][0] = (this.map.clouds.position[a][0]*3+canvas.width) + (canvas.width+200);
+                                tm[y] = [];
+                                if( Level_1.map.tiles[y][x] == 1 )
+                                {
+                                        tm[y][x] = new Image();
+                                        tm[y][y].src = "res/tile_1.png";
+                                        ctx.drawImage(tm[y][x], 30*x, 30*y, 30,30);
+                                }
                         }
                 }
-                
-                var tm = new Image();
-                tm.src = "res/tile_1.png";
-                
-                ctx.drawImage(tm, 0,0, 30,30);
                 
         }
 }
