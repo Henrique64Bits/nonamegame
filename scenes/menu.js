@@ -2,6 +2,12 @@ var Menu = {
         background : new Image(),
         selects : ["play", "controlls", "options"],
         select : 0,
+        clear : false,
+        
+        hide : function( canvas, ctx )
+        {
+                ctx.clearRect(0,0, canvas.width, canvas.height);
+        },
         
         keyDown : function( e )
         {
@@ -42,6 +48,7 @@ var Menu = {
                 {
                         if( Menu.select == 0 )
                         {
+                                Menu.clear = true;
                                 _scene = "level_1";
                         }
                 }
@@ -90,6 +97,11 @@ var Menu = {
                 {
                         ctx.font = "13px Kiwi";
                         ctx.fillText("options", canvas.width/2.4, 300);
+                }
+                
+                if( Menu.clear == true )
+                {
+                        Menu.hide(canvas, ctx);
                 }
                 
                 
