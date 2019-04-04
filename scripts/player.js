@@ -87,11 +87,14 @@ var Player = {
         {
                 Player._position[0] += Player._vel[0];
                 Player._position[1] += Player._vel[1];
-                
+        },
+        
+        spriteAdapter : function()
+        {
                 if( Player._runLeft == true )
                 {
                         Player._src_count[0] = 0;
-                        Player._src_count[1]++;
+                        Player._src_count[1] += 1;
                         if( Player._src_count >= 3 )
                         {
                                 Player._src_count = 0;
@@ -101,7 +104,7 @@ var Player = {
                 if( Player._runRight == true )
                 {
                         Player._src_count[0] = 1;
-                        Player._src_count[1]++;
+                        Player._src_count[1] += 1;
                         if( Player._src_count >= 3 )
                         {
                                 Player._src_count = 0;
@@ -149,5 +152,6 @@ var Player = {
                 Player._sprite.src = Player._src[Player._src_count[0]][Player._src_count[1]];
                 ctx.drawImage(Player._sprite, Player._position[0], Player._position[1], Player._dims[0], Player._dims[1]);
                 Player._ground = false;
+                Player.spriteAdapter();
         }
 }
