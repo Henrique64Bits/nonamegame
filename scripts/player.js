@@ -10,6 +10,36 @@ var Player = {
                ["res/bob/bob_0-2.png", "res/bob/bob_0.png", "res/bob/bob_0-1.png"]],
         _src_count : [1,1],
         
+        colliders : function( tl )
+        {
+                for( y in tl )
+                {
+                        for( x in tl[y] )
+                        {
+                                var i = tl[y][x]
+                                if( i != 0 )
+                                {
+                                        var pBottom = Player._position[1] + Player._dims[1];
+                                        var pTop = Player._position[1];
+                                        var pRight = Player._position[0] + Player._dims[0];
+                                        var pLeft = Player._position[0];
+                                        
+                                        var bBottom = y + Blocks[i].dims[1];
+                                        var bRight = x + Blocks[i].dims[0];
+                                        
+                                        if( pBottom >= y && pBottom < bBottom && pLeft >= x && pRight < bRight )
+                                        {
+                                                Player._position[1] = y - Player._dims[1];
+                                                Player._ground = true;
+                                        }else
+                                        {
+                                                Player._ground = false;
+                                        }
+                                }
+                        }
+                }
+        },
+        
         keyDown : function( e )
         {
                 var code  = e.keyCode;
