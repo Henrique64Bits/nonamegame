@@ -39,13 +39,21 @@ var Level_1 = {
         
         main : function( canvas, ctx )
         {
+                 Level_1.map.clouds.sprite[0] = new Image();
+                 Level_1.map.clouds.sprite[0].src = "res/cloud_1.png";
+                 Level_1.map.clouds.position[0] = [160+(230*a), 150];
                 
-                for( a = 0; a < Level_1.map.clouds._clouds; a++ )
-                {
-                        Level_1.map.clouds.sprite[a] = new Image();
-                        Level_1.map.clouds.sprite[a].src = "res/cloud_1.png";
-                        Level_1.map.clouds.position[a] = [160+(230*a), 150];
-                }
+                 Level_1.map.clouds.sprite[1] = new Image();
+                 Level_1.map.clouds.sprite[1].src = "res/cloud_1.png";
+                 Level_1.map.clouds.position[1] = [160+(230*a), 150];
+                
+                 Level_1.map.clouds.sprite[2] = new Image();
+                 Level_1.map.clouds.sprite[2].src = "res/cloud_1.png";
+                 Level_1.map.clouds.position[2] = [160+(230*a), 150];
+                
+                 Level_1.map.clouds.sprite[3] = new Image();
+                 Level_1.map.clouds.sprite[3].src = "res/cloud_1.png";
+                 Level_1.map.clouds.position[3] = [160+(230*a), 150];
         },
         loop : function( canvas, ctx )
         {
@@ -57,7 +65,7 @@ var Level_1 = {
                 Player.jump();
                 Player.moviment();
                 
-                for( a = 0; a < Level_1.map.clouds._clouds; a++  )
+                for( a = 0; a < 3; a++  )
                 {
                         Level_1.map.clouds.position[a][0] += -3;
                         ctx.drawImage(Level_1.map.clouds.sprite[a], Level_1.map.clouds.position[a][0], Level_1.map.clouds.position[a][1], Level_1.map.clouds.dims[a][0], Level_1.map.clouds.dims[a][1]);
