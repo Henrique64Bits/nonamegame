@@ -22,6 +22,28 @@ loop();
 
 // functions basic
 
+function keyD( e )
+{
+     if( _scene == "menu" )
+     {
+          Menu.keyDown(e);
+     } 
+     else if( _scene == "level_1" )
+     {
+          Level_1.keyDown(e);
+     }
+}
+function keyU( e )
+{
+     if( _scene == "menu" )
+     {
+          Menu.keyUp(e);
+     } 
+     else if( _scene == "level_1" )
+     {
+          Level_1.keyUp(e);
+     }
+}
 
 
 function render()
@@ -43,14 +65,6 @@ function loop()
     requestAnimationFrame(loop, canvas);
     render();
      
-    if( _scene == "menu" )
-    {
-         window.addEventListener("keydown", Menu.keyDown);
-         window.addEventListener("keyup", Menu.keyUp);
-    }
-    if( _scene == "level_1" )
-    {
-          window.addEventListener("keydown", Level_1.keyDown);
-          window.addEventListener("keyup", Level_1.keyUp);
-    }
+    window.addEventListener("keydown", keyD);
+    window.addEventListener("keyup", keyU);
 }
