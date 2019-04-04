@@ -6,11 +6,9 @@ var Player = {
         _jump : false,
         _ground : false,
         _sprite : new Image(),
-        _src : [["res/bob/bob_1-2.png", "res/bob/bob_1.png", "res/bob/bob_1-1.png"], 
-               ["res/bob/bob_0-2.png", "res/bob/bob_0.png", "res/bob/bob_0-1.png"]],
         _srcL : ["res/bob/bob_1-2.png", "res/bob/bob_1.png", "res/bob/bob_1-1.png"],
         _srcR : ["res/bob/bob_0-2.png", "res/bob/bob_0.png", "res/bob/bob_0-1.png"],
-        _src_count : [1,1],
+        _count : 0,
         _runLeft : false,
         _runRight : false,
         _runJump : false,
@@ -53,17 +51,13 @@ var Player = {
                 {
                         Player._vel[0] = -10;
                         Player._runLeft = true;
-                        var count = 0;
-                        Player._sprite.src = Player._srcL[count];
-                        count += 1;
+                        Player._sprite.src = Player._srcL[_count];
                 }
                 if( code == 68 || code == 39 )
                 {
                         Player._vel[0] = 10;
                         Player._runRight = true;
-                        var count = 0;
-                        Player._sprite.src = Player._srcR[count];
-                        count += 1;
+                        Player._sprite.src = Player._srcR[_count];
                 }
                 
                 
@@ -96,6 +90,23 @@ var Player = {
         {
                 Player._position[0] += Player._vel[0];
                 Player._position[1] += Player._vel[1];
+                
+                if( Player._runLeft == true )
+                {
+                        _count += 1;
+                        if( _count >= 3 )
+                        {
+                                _count = 0;
+                        }
+                }
+                if( Player._runRight == true )
+                {
+                        _count += 1;
+                        if( _count >= 3 )
+                        {
+                                _count = 0;
+                        }
+                }
         },
         
         gravity : function()
@@ -139,4 +150,4 @@ var Player = {
         }
 }
 
-Player._sprite.src = Player._src[Player._src_count[0]][Player._src_count[1]];
+Player._sprite.src = "res/bob/bob_0.png";
