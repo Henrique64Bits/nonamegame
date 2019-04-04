@@ -24,8 +24,8 @@ var Player = {
                                         var pRight = Player._position[0] + Player._dims[0];
                                         var pLeft = Player._position[0];
                                         
-                                        var bBottom = y + Blocks[i].dims[1];
-                                        var bRight = x + Blocks[i].dims[0];
+                                        var bBottom = (30*y) + Blocks[i].dims[1];
+                                        var bRight = (30*x) + Blocks[i].dims[0];
                                         var bLeft = 30*x;
                                         var bTop = 30*y;
                                         
