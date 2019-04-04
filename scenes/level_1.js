@@ -81,16 +81,5 @@ var Level_1 = {
                 
                 ctx.drawImage(tm, 0,0, 30,30);
                 
-                for( y in this.map.tiles )
-                {
-                        for( x in this.map.tiles[y] )
-                        {
-                                if( this.map.tiles[y][x] == 1 )
-                                {
-                                        
-                                        ctx.drawImage(tm, 30*x,30*y, 30,30);
-                                }
-                        }
-                }
         }
 }
