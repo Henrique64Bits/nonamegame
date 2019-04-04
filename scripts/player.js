@@ -38,6 +38,8 @@ var Player = {
                                                 if( Player._jump == true )
                                                 {
                                                         Player._jump = false;
+                                                        Player._vel[1] = 0;
+                                                        Player._gravity = true;
                                                 }
                                         }
                                 }
