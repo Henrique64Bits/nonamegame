@@ -51,13 +51,13 @@ var Player = {
                 {
                         Player._vel[0] = -10;
                         Player._runLeft = true;
-                        Player._sprite.src = "res/bob/bob_1.png";
+                        //Player._sprite.src = "res/bob/bob_1.png";
                 }
                 if( code == 68 || code == 39 )
                 {
                         Player._vel[0] = 10;
                         Player._runRight = true;
-                        Player._sprite.src = "res/bob/bob_0.png";
+                        //Player._sprite.src = "res/bob/bob_0.png";
                 }
                 
                 
@@ -154,7 +154,7 @@ var Player = {
         {
                 ctx.drawImage(Player._sprite, Player._position[0], Player._position[1], Player._dims[0], Player._dims[1]);
                 Player._ground = false;
-                //Player.spriteAdapter();
+                Player.spriteAdapter();
         }
 }
 
