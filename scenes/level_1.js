@@ -15,9 +15,9 @@ var Level_1 = {
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                        [1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                        [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
                         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
@@ -39,21 +39,21 @@ var Level_1 = {
         
         main : function( canvas, ctx )
         {
-                 Level_1.map.clouds.sprite[0] = new Image();
-                 Level_1.map.clouds.sprite[0].src = "res/cloud_1.png";
-                 Level_1.map.clouds.position[0] = [160+(230*0), 150];
+                 this.map.clouds.sprite[0] = new Image();
+                 this.map.clouds.sprite[0].src = "res/cloud_1.png";
+                 this.map.clouds.position[0] = [160+(230*0), 150];
                 
-                 Level_1.map.clouds.sprite[1] = new Image();
-                 Level_1.map.clouds.sprite[1].src = "res/cloud_1.png";
-                 Level_1.map.clouds.position[1] = [160+(230*1), 150];
+                 this.map.clouds.sprite[1] = new Image();
+                 this.map.clouds.sprite[1].src = "res/cloud_1.png";
+                 this.map.clouds.position[1] = [160+(230*1), 150];
                 
-                 Level_1.map.clouds.sprite[2] = new Image();
-                 Level_1.map.clouds.sprite[2].src = "res/cloud_1.png";
-                 Level_1.map.clouds.position[2] = [160+(230*2), 150];
+                 this.map.clouds.sprite[2] = new Image();
+                 this.map.clouds.sprite[2].src = "res/cloud_1.png";
+                 this.map.clouds.position[2] = [160+(230*2), 150];
                 
-                 Level_1.map.clouds.sprite[3] = new Image();
-                 Level_1.map.clouds.sprite[3].src = "res/cloud_1.png";
-                 Level_1.map.clouds.position[3] = [160+(230*3), 150];
+                 this.map.clouds.sprite[3] = new Image();
+                 this.map.clouds.sprite[3].src = "res/cloud_1.png";
+                 this.map.clouds.position[3] = [160+(230*3), 150];
         },
         loop : function( canvas, ctx )
         {
@@ -67,23 +67,25 @@ var Level_1 = {
                 
                 for( a = 0; a < 3; a++  )
                 {
-                        Level_1.map.clouds.position[a][0] += -3;
-                        ctx.drawImage(Level_1.map.clouds.sprite[a], Level_1.map.clouds.position[a][0], Level_1.map.clouds.position[a][1], Level_1.map.clouds.dims[a][0], Level_1.map.clouds.dims[a][1]);
+                        this.map.clouds.position[a][0] += -3;
+                        ctx.drawImage(this.map.clouds.sprite[a], this.map.clouds.position[a][0], this.map.clouds.position[a][1], this.map.clouds.dims[a][0], this.map.clouds.dims[a][1]);
                         
-                        if( Level_1.map.clouds.position[a][0] <= -190 )
+                        if( this.map.clouds.position[a][0] <= -190 )
                         {
-                                Level_1.map.clouds.position[a][0] = (Level_1.map.clouds.position[a][0]*3+canvas.width) + (canvas.width+200);
+                                this.map.clouds.position[a][0] = (this.map.clouds.position[a][0]*3+canvas.width) + (canvas.width+200);
                         }
                 }
                 
-                for( y in Level_1.map.tiles )
+                var tm = new Image();
+                tm.src = "res/tile_1.png";
+                
+                for( y in this.map.tiles )
                 {
-                        for( x in Level_1.map.tiles[y] )
+                        for( x in this.map.tiles[y] )
                         {
-                                if( Level_1.map.tiles[y][x] == 1 )
+                                if( this.map.tiles[y][x] == 1 )
                                 {
-                                        var tm = new Image();
-                                        tm.src = "res/tile_1.png";
+                                        
                                         ctx.drawImage(tm, 30*x,30*y, 30,30);
                                 }
                         }
