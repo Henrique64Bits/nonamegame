@@ -53,7 +53,7 @@ function render()
      {
           Menu.main(canvas, ctx);
      }
-     if( _scene == "level_1" )
+     else if( _scene == "level_1" )
      {
           Level_1.loop(canvas, ctx);
      }
