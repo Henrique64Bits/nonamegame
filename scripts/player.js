@@ -52,7 +52,7 @@ var Player = {
         {
                 if( Player._gravity == true )
                 {
-                        Player._vel[1] = Player._vel[1]+1;
+                        Player._vel[1] = 5;
                 }
         },
         
