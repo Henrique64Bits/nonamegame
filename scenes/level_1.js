@@ -3,7 +3,6 @@ var Level_1 = {
                 background : new Image(),
                 x : 0, y : 0,
                 width : 900, height : 200,
-                tiles : [],
                 clouds : {
                         _clouds : 4,
                         sprite : [],
