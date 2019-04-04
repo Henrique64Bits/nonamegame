@@ -41,19 +41,19 @@ var Level_1 = {
         {
                  Level_1.map.clouds.sprite[0] = new Image();
                  Level_1.map.clouds.sprite[0].src = "res/cloud_1.png";
-                 Level_1.map.clouds.position[0] = [160+(230*a), 150];
+                 Level_1.map.clouds.position[0] = [160+(230*0), 150];
                 
                  Level_1.map.clouds.sprite[1] = new Image();
                  Level_1.map.clouds.sprite[1].src = "res/cloud_1.png";
-                 Level_1.map.clouds.position[1] = [160+(230*a), 150];
+                 Level_1.map.clouds.position[1] = [160+(230*1), 150];
                 
                  Level_1.map.clouds.sprite[2] = new Image();
                  Level_1.map.clouds.sprite[2].src = "res/cloud_1.png";
-                 Level_1.map.clouds.position[2] = [160+(230*a), 150];
+                 Level_1.map.clouds.position[2] = [160+(230*2), 150];
                 
                  Level_1.map.clouds.sprite[3] = new Image();
                  Level_1.map.clouds.sprite[3].src = "res/cloud_1.png";
-                 Level_1.map.clouds.position[3] = [160+(230*a), 150];
+                 Level_1.map.clouds.position[3] = [160+(230*3), 150];
         },
         loop : function( canvas, ctx )
         {
