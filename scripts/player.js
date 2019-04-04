@@ -32,15 +32,11 @@ var Player = {
                                         if( pBottom >= bTop && pRight > bLeft && pLeft < bRight && pBottom < bBottom )
                                         {
                                                 Player._position[1] = bTop-Player._dims[1];
+                                                Player._ground = true;
                                         }
                                         else
                                         {
-                                                if( Player._jump == true )
-                                                {
-                                                        Player._jump = false;
-                                                        Player._vel[1] = 0;
-                                                        Player._gravity = true;
-                                                }
+                                                
                                         }
                                 }
                         }
@@ -95,7 +91,7 @@ var Player = {
         
         jump : function()
         {
-                if( Player._jump == true )
+                if( Player._jump == true && Player._ground == true )
                 {
                         if( Player._vel[1] > -50 )
                         {
@@ -115,5 +111,6 @@ var Player = {
         {
                 Player._sprite.src = Player._src[Player._src_count[0]][Player._src_count[1]];
                 ctx.drawImage(Player._sprite, Player._position[0], Player._position[1], Player._dims[0], Player._dims[1]);
+                Player._ground = false;
         }
 }
