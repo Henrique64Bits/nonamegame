@@ -79,6 +79,8 @@ var Level_1 = {
                 var tm = new Image();
                 tm.src = "res/tile_1.png";
                 
+                ctx.drawImage(tm, 0,0, 30,30);
+                
                 for( y in this.map.tiles )
                 {
                         for( x in this.map.tiles[y] )
