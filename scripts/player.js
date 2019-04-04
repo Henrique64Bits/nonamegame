@@ -8,6 +8,8 @@ var Player = {
         _sprite : new Image(),
         _src : [["res/bob/bob_1-2.png", "res/bob/bob_1.png", "res/bob/bob_1-1.png"], 
                ["res/bob/bob_0-2.png", "res/bob/bob_0.png", "res/bob/bob_0-1.png"]],
+        _srcL : ["res/bob/bob_1-2.png", "res/bob/bob_1.png", "res/bob/bob_1-1.png"],
+        _srcR : ["res/bob/bob_0-2.png", "res/bob/bob_0.png", "res/bob/bob_0-1.png"],
         _src_count : [1,1],
         _runLeft : false,
         _runRight : false,
@@ -51,13 +53,17 @@ var Player = {
                 {
                         Player._vel[0] = -10;
                         Player._runLeft = true;
-                        //Player._sprite.src = "res/bob/bob_1.png";
+                        var count = 0;
+                        Player._sprite.src = Player._srcL[count];
+                        count += 1;
                 }
                 if( code == 68 || code == 39 )
                 {
                         Player._vel[0] = 10;
                         Player._runRight = true;
-                        //Player._sprite.src = "res/bob/bob_0.png";
+                        var count = 0;
+                        Player._sprite.src = Player._srcR[count];
+                        count += 1;
                 }
                 
                 
@@ -90,30 +96,6 @@ var Player = {
         {
                 Player._position[0] += Player._vel[0];
                 Player._position[1] += Player._vel[1];
-        },
-        
-        spriteAdapter : function()
-        {
-                if( Player._runLeft == true )
-                {
-                        Player._src_count[0] = 0;
-                        Player._src_count[1] += 1;
-                        if( Player._src_count >= 3 )
-                        {
-                                Player._src_count = 0;
-                        }
-                        Player._sprite.src = Player._src[Player._src_count[0]][Player._src_count[1]];
-                }
-                if( Player._runRight == true )
-                {
-                        Player._src_count[0] = 1;
-                        Player._src_count[1] += 1;
-                        if( Player._src_count >= 3 )
-                        {
-                                Player._src_count = 0;
-                        }
-                        Player._sprite.src = Player._src[Player._src_count[0]][Player._src_count[1]];
-                }
         },
         
         gravity : function()
@@ -154,7 +136,6 @@ var Player = {
         {
                 ctx.drawImage(Player._sprite, Player._position[0], Player._position[1], Player._dims[0], Player._dims[1]);
                 Player._ground = false;
-                Player.spriteAdapter();
         }
 }
 
