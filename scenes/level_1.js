@@ -48,13 +48,14 @@ var Level_1 = {
 
                 var tm = [];
                 
-                for( y in Level_1.map.tiles )
+                for( y = 0; y < 8; y++ )
                 {
                         for( x in Level_1.map.tiles[y] )
                         {
+                                tm[y] = [];
+                                tm[y][x] = new Image();
                                 if( Level_1.map.tiles[y][x] == 1 )
                                 {
-                                        tm[y][x] = new Image();
                                         tm[y][y].src = "https://raw.githubusercontent.com/Henrique64Bits/nonamegame/master/res/tile_1.png";
                                         ctx.drawImage(tm[y][x], 50*x, 50*y, 50,50);
                                 }
