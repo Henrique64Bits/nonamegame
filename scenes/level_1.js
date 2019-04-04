@@ -36,9 +36,6 @@ var Level_1 = {
         
         main : function( canvas, ctx )
         {
-                Level_1.map.background.src = "res/background_1.png";
-                ctx.drawImage(Level_1.map.background, 0,0, canvas.width, canvas.height);
-                
                 var _clouds = 4;
                 
                 for( a = 0; a < _clouds; a++ )
@@ -50,6 +47,9 @@ var Level_1 = {
         },
         loop : function( canvas, ctx )
         {
+                Level_1.map.background.src = "res/background_1.png";
+                ctx.drawImage(Level_1.map.background, 0,0, canvas.width, canvas.height);
+                
                 for( a in Level_1.map.clouds.position )
                 {
                         Level_1.map.clouds.position[a][0] += -3;
