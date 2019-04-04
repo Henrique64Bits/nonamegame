@@ -9,6 +9,10 @@ var Player = {
         _src : [["res/bob/bob_1-2.png", "res/bob/bob_1.png", "res/bob/bob_1-1.png"], 
                ["res/bob/bob_0-2.png", "res/bob/bob_0.png", "res/bob/bob_0-1.png"]],
         _src_count : [1,1],
+        _runLeft : false,
+        _runRight : false,
+        _runJump : false,
+        _runDown : true,
         
         colliders : function( tl )
         {
@@ -46,10 +50,12 @@ var Player = {
                 if( code == 65 || code == 37 )
                 {
                         Player._vel[0] = -10;
+                        Player._runLeft = true;
                 }
                 else if( code == 68 || code == 39 )
                 {
                         Player._vel[0] = 10;
+                        Player._runRight = true;
                 }
                 
                 if( code == 87 || code == 38 )
@@ -57,6 +63,7 @@ var Player = {
                         if( Player._ground == true )
                         {
                                 Player._jump = true;
+                                Player._runJump = true;
                         }
                 }
         },
@@ -67,10 +74,12 @@ var Player = {
                 if( code == 65 || code == 37 )
                 {
                         Player._vel[0] = 0;
+                        Player._runLeft = false;
                 }
                 else if( code == 68 || code == 39 )
                 {
                         Player._vel[0] = 0;
+                        Player._runRight = false;
                 }
         },
         
@@ -78,6 +87,17 @@ var Player = {
         {
                 Player._position[0] += Player._vel[0];
                 Player._position[1] += Player._vel[1];
+                
+                if( Player._runLeft == true )
+                {
+                        Player._src_count[0] = 0;
+                        Player._src_count[1]++;
+                }
+                else if( Player._runRight == true )
+                {
+                        Player._src_count[0] = 1;
+                        Player._src_count[1]++;
+                }
         },
         
         gravity : function()
@@ -85,6 +105,14 @@ var Player = {
                 if( Player._gravity == true )
                 {
                         Player._vel[1] = 5;
+                        if( Player._ground == false )
+                        {
+                                Player._runDown = true;
+                        }
+                        else
+                        {
+                                Player.runDown = false;
+                        }
                 }
         },
         
