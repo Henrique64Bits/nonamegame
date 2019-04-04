@@ -54,6 +54,7 @@ var Level_1 = {
                 Player.gravity();
                 Player.jump();
                 Player.moviment();
+                Player.colliders(Level_1.map.tiles);
                 
                 
 
