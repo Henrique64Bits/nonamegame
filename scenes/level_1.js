@@ -46,18 +46,16 @@ var Level_1 = {
                 Player.jump();
                 Player.moviment();
 
-                var tm = [];
+                var tm = new Image();
+                tm.src = "https://raw.githubusercontent.com/Henrique64Bits/nonamegame/master/res/tile_1.png";
                 
                 for( y = 0; y < 8; y++ )
                 {
                         for( x in Level_1.map.tiles[y] )
                         {
-                                tm[y] = [];
-                                tm[y][x] = new Image();
                                 if( Level_1.map.tiles[y][x] == 1 )
                                 {
-                                        tm[y][y].src = "https://raw.githubusercontent.com/Henrique64Bits/nonamegame/master/res/tile_1.png";
-                                        ctx.drawImage(tm[y][x], 50*x, 50*y, 50,50);
+                                        ctx.drawImage(tm, 50*x, 50*y, 50,50);
                                 }
                         }
                 }
