@@ -1,6 +1,6 @@
 var Player = {
         _position : [0,0],
-        _dims : [70,100],
+        _dims : [30,70],
         _vel : [0,0],
         _gravity : true,
         _jump : false,
@@ -52,7 +52,7 @@ var Player = {
         {
                 if( Player._gravity == true )
                 {
-                        Player._vel[1] += 10;
+                        Player._vel[1] += 5;
                 }
         },
         
