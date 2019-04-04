@@ -51,12 +51,15 @@ var Player = {
                 {
                         Player._vel[0] = -10;
                         Player._runLeft = true;
+                        Player._sprite.src = "res/bob/bob_1.png";
                 }
-                else if( code == 68 || code == 39 )
+                if( code == 68 || code == 39 )
                 {
                         Player._vel[0] = 10;
                         Player._runRight = true;
+                        Player._sprite.src = "res/bob/bob_0.png";
                 }
+                
                 
                 if( code == 87 || code == 38 )
                 {
@@ -152,6 +155,6 @@ var Player = {
                 Player._sprite.src = Player._src[Player._src_count[0]][Player._src_count[1]];
                 ctx.drawImage(Player._sprite, Player._position[0], Player._position[1], Player._dims[0], Player._dims[1]);
                 Player._ground = false;
-                Player.spriteAdapter();
+                //Player.spriteAdapter();
         }
 }
