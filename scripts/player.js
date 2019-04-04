@@ -32,6 +32,9 @@ var Player = {
                                         if( pBottom >= bTop && pRight > bLeft && pLeft < bRight && pBottom < bBottom )
                                         {
                                                 Player._position[1] = bTop-Player._dims[1];
+                                        }
+                                        else
+                                        {
                                                 if( Player._jump == true )
                                                 {
                                                         Player._jump = false;
