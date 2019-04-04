@@ -48,12 +48,7 @@ var Level_1 = {
                 Player.gravity();
                 Player.jump();
                 Player.moviment();
-                
-                //ctx.fillRect(10,10, 70,20);
-                var sla = new Image();
-                sla.src = "https://raw.githubusercontent.com/Henrique64Bits/nonamegame/master/res/tile_1.png";
-                ctx.drawImage(sla, 0,0, 200,200);
-                
+
                 var tm = [];
                 
                 for( y in Level_1.map.tiles )
@@ -64,7 +59,7 @@ var Level_1 = {
                                 if( Level_1.map.tiles[y][x] == 1 )
                                 {
                                         tm[y][x] = new Image();
-                                        tm[y][y].src = "res/tile_1.png";
+                                        tm[y][y].src = "https://raw.githubusercontent.com/Henrique64Bits/nonamegame/master/res/tile_1.png";
                                         ctx.drawImage(tm[y][x], 50*x, 50*y, 50,50);
                                 }
                         }
