@@ -50,11 +50,7 @@ function loop()
     }
     if( _scene == "level_1" )
     {
-         Player.jump();
-         Player.gravity();
-         Player.moviment();
-         Player.update(canvas,ctx);
-         window.addEventListener("keydown", Player.keyDown);
-         window.addEventListener("keyup", Player.keyUp);
+          window.addEventListener("keydown", Level_1.keyDown);
+          window.addEventListener("keyup", Level_1.keyUp);
     }
 }
