@@ -57,9 +57,9 @@ var Level_1 = {
                 Player.colliders(Level_1.map.tiles);
                 
                 
-                if( Player.position[0] >= canvas.width/2 )
+                if( Player.position[0] >= canvas.width/2 && Player.vel[0] > 0 )
                 {
-                        Level_1.map.x += -1;
+                        Level_1.map.x--;
                 }
                 
                 
