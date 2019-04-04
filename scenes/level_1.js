@@ -50,6 +50,9 @@ var Level_1 = {
                 Player.moviment();
                 
                 //ctx.fillRect(10,10, 70,20);
+                var sla = new Image();
+                sla.src = "https://i.pinimg.com/originals/c6/55/b5/c655b5ea3b010e0ee6f435e42d0cbd98.png";
+                ctx.drawImage(sla, 0,0, 200,200);
                 
                 var tm = [];
                 
