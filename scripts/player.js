@@ -92,11 +92,19 @@ var Player = {
                 {
                         Player._src_count[0] = 0;
                         Player._src_count[1]++;
+                        if( Player._src_count >= 3 )
+                        {
+                                Player._src_count = 0;
+                        }
                 }
                 else if( Player._runRight == true )
                 {
                         Player._src_count[0] = 1;
                         Player._src_count[1]++;
+                        if( Player._src_count >= 3 )
+                        {
+                                Player._src_count = 0;
+                        }
                 }
         },
         
