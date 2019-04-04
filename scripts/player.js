@@ -29,7 +29,7 @@ var Player = {
                                         var bLeft = 30*x;
                                         var bTop = 30*y;
                                         
-                                        if( pBottom >= bTop && pRight > bLeft && pLeft < bRight )
+                                        if( pBottom >= bTop && pRight > bLeft && pLeft < bRight && pBottom <= bTop )
                                         {
                                                 Player._position[1] = bTop-Player._dims[1];
                                                 Player._ground = true;
