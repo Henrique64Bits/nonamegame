@@ -51,29 +51,11 @@ var Player = {
                 {
                         Player._vel[0] = -10;
                         Player._runLeft = true;
-                        if( Player._runLeft == true )
-                        {
-                                Player._src_count[0] = 0;
-                                Player._src_count[1]++;
-                                if( Player._src_count >= 3 )
-                                {
-                                        Player._src_count = 0;
-                                }
-                        }
                 }
                 else if( code == 68 || code == 39 )
                 {
                         Player._vel[0] = 10;
                         Player._runRight = true;
-                        if( Player._runRight == true )
-                        {
-                                Player._src_count[0] = 1;
-                                Player._src_count[1]++;
-                                if( Player._src_count >= 3 )
-                                {
-                                        Player._src_count = 0;
-                                }
-                        }
                 }
                 
                 if( code == 87 || code == 38 )
@@ -114,8 +96,9 @@ var Player = {
                         {
                                 Player._src_count = 0;
                         }
+                        Player._sprite.src = Player._src[Player._src_count[0]][Player._src_count[1]];
                 }
-                else if( Player._runRight == true )
+                if( Player._runRight == true )
                 {
                         Player._src_count[0] = 1;
                         Player._src_count[1]++;
@@ -123,6 +106,7 @@ var Player = {
                         {
                                 Player._src_count = 0;
                         }
+                        Player._sprite.src = Player._src[Player._src_count[0]][Player._src_count[1]];
                 }
         },
         
