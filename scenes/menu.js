@@ -4,11 +4,6 @@ var Menu = {
         select : 0,
         clear : false,
         
-        hide : function( canvas, ctx )
-        {
-                ctx.clearRect(0,0, canvas.width, canvas.height);
-        },
-        
         keyDown : function( e )
         {
                 var code = e.keyCode;
@@ -48,7 +43,6 @@ var Menu = {
                 {
                         if( Menu.select == 0 )
                         {
-                                Menu.clear = true;
                                 _scene = "level_1";
                         }
                 }
@@ -98,10 +92,6 @@ var Menu = {
                         ctx.fillText("options", canvas.width/2.4, 300);
                 }
                 
-                if( Menu.clear == true )
-                {
-                        Menu.hide(canvas, ctx);
-                }
                 
                 
         }
