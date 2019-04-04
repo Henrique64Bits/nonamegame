@@ -80,12 +80,12 @@ var Menu = {
                 if( Menu.select == 1 )
                 {
                         ctx.font = "15px Kiwi";
-                        ctx.fillText("controlls", canvas.width/2.4, 250);
+                        ctx.fillText("controls", canvas.width/2.4, 250);
                 }
                 else
                 {
                         ctx.font = "13px Kiwi";
-                        ctx.fillText("controlls", canvas.width/2.4, 250);
+                        ctx.fillText("controls", canvas.width/2.4, 250);
                 }
                 
                 if( Menu.select == 2 )
