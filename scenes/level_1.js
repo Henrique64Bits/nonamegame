@@ -49,6 +49,8 @@ var Level_1 = {
                 Player.jump();
                 Player.moviment();
                 
+                ctx.fillRect(10,10, 70,20);
+                
                 var tm = [];
                 
                 for( y in Level_1.map.tiles )
