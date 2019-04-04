@@ -26,10 +26,12 @@ var Player = {
                                         
                                         var bBottom = y + Blocks[i].dims[1];
                                         var bRight = x + Blocks[i].dims[0];
+                                        var bLeft = 30*x;
+                                        var bTop = 30*y;
                                         
-                                        if( pBottom >= y && pLeft >= x && pRight <= bRight )
+                                        if( pBottom >= bTop && pLeft >= bLeft && pRight <= bRight )
                                         {
-                                                Player._position[1] = (30*y)-Player._dims[1];
+                                                Player._position[1] = bTop-Player._dims[1];
                                                 Player._ground = true;
                                         }
                                 }
