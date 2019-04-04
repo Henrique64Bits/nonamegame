@@ -4,10 +4,9 @@ var Blocks = [
                                 dims : []
                 },
                 {
-                                sprite : new Image(),
+                                sprite : "res/tile_1.png",
                                 dims : [30, 30]
                 }
 ];
-Blocks[1].sprite.src = "res/tile_1.png";
 
 var _scene = "menu";
