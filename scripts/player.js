@@ -10,6 +10,38 @@ var Player = {
                ["res/bob/bob_0-2.png", "res/bob/bob_0.png", "res/bob/bob_0-1.png"]],
         _src_count : [1,1],
         
+        keyDown : function( e )
+        {
+                var code  = e.keyCode;
+                
+                if( code == 65 || code == 37 )
+                {
+                        Player._vel[0] = -10;
+                }
+                else if( code == 68 || code == 39 )
+                {
+                        Player._vel[0] = 10;
+                }
+                
+                if( code == 87 || code == 39 )
+                {
+                        Player._jump = true;
+                }
+        },
+        keyUp : function( e )
+        {
+                var code = e.keyCode;
+                
+                if( code == 65 || code == 37 )
+                {
+                        Player._vel[0] = 0;
+                }
+                else if( code == 68 || code == 39 )
+                {
+                        Player._vel[0] = 0;
+                }
+        },
+        
         moviment : function()
         {
                 Player._position[0] += Player._vel[0];
