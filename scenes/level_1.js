@@ -50,6 +50,8 @@ var Level_1 = {
                 Level_1.map.background.src = "res/background_1.png";
                 ctx.drawImage(Level_1.map.background, 0,0, canvas.width, canvas.height);
                 
+                Player.update(canvas,ctx);
+                
                 for( a in Level_1.map.clouds.position )
                 {
                         Level_1.map.clouds.position[a][0] += -3;
