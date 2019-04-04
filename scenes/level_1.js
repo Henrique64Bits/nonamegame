@@ -51,7 +51,7 @@ var Level_1 = {
                 
                 //ctx.fillRect(10,10, 70,20);
                 var sla = new Image();
-                sla.src = "https://i.pinimg.com/originals/c6/55/b5/c655b5ea3b010e0ee6f435e42d0cbd98.png";
+                sla.src = "https://raw.githubusercontent.com/Henrique64Bits/nonamegame/master/res/tile_1.png";
                 ctx.drawImage(sla, 0,0, 200,200);
                 
                 var tm = [];
