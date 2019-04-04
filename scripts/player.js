@@ -152,9 +152,10 @@ var Player = {
         
         update : function( canvas, ctx )
         {
-                Player._sprite.src = Player._src[Player._src_count[0]][Player._src_count[1]];
                 ctx.drawImage(Player._sprite, Player._position[0], Player._position[1], Player._dims[0], Player._dims[1]);
                 Player._ground = false;
                 //Player.spriteAdapter();
         }
 }
+
+Player._sprite.src = Player._src[Player._src_count[0]][Player._src_count[1]];
