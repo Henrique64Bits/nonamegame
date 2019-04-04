@@ -54,4 +54,13 @@ function loop()
          window.addEventListener("keydown", Menu.keyDown);
          window.addEventListener("keyup", Menu.keyUp);
     }
+    if( _scene == "level_1" )
+    {
+         Player.jump();
+         Player.gravity();
+         Player.moviment();
+         Player.update(canvas,ctx);
+         window.addEventListener("keydown", Player.keyDown);
+         window.addEventListener("keyup", Player.keyUp);
+    }
 }
