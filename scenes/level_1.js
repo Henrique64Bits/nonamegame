@@ -5,7 +5,7 @@ var Level_1 = {
                 width : 900, height : 200,
                 clouds : {
                         _clouds : 4,
-                        sprite : [],
+                        sprite : new Image(),
                         position : [],
                         dims : [195, 87]
                 },
@@ -54,6 +54,8 @@ var Level_1 = {
                 Player.gravity();
                 Player.jump();
                 Player.moviment();
+                
+                
 
                 var tm = new Image();
                 tm.src = "res/tile_1.png";
@@ -65,7 +67,7 @@ var Level_1 = {
                                 var i = Level_1.map.tiles[y][x];
                                 if( i != 0 )
                                 {
-                                        ctx.drawImage(tm, (Blocks[i].dims[0]*x)*Level_1.map.x,(Blocks[i].dims[1]*y)*Level_1.map.y, Blocks[i].dims[0],Blocks[i].dims[1]);
+                                        ctx.drawImage(Blocks[i].sprite, (Blocks[i].dims[0]*x)*Level_1.map.x,(Blocks[i].dims[1]*y)*Level_1.map.y, Blocks[i].dims[0],Blocks[i].dims[1]);
                                 }
                         }
                 }
