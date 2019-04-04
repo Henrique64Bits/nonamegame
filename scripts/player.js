@@ -58,7 +58,10 @@ var Player = {
                 
                 if( code == 87 || code == 38 )
                 {
-                        Player._jump = true;
+                        if( Player._ground == true )
+                        {
+                                Player._jump = true;
+                        }
                 }
         },
         keyUp : function( e )
@@ -91,7 +94,7 @@ var Player = {
         
         jump : function()
         {
-                if( Player._jump == true && Player._ground == true )
+                if( Player._jump == true )
                 {
                         if( Player._vel[1] > -50 )
                         {
