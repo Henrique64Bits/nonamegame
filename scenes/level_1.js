@@ -58,9 +58,11 @@ var Level_1 = {
                 
                 if( Player.vel[0] >0 && Player.position[0] >= canvas.width/2 )
                 {
-                        var xx = 0;
-                        xx--;
-                        ctx.translate(xx, 0);
+                        Level_1.map.x += -1;
+                        if( Level_1.map.x == 0 )
+                        {
+                                Level_1.map.x = -1;
+                        }
                 }
 
                 var tm = new Image();
