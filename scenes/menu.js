@@ -63,7 +63,7 @@ var Menu = {
                 ctx.drawImage(Menu.background, 0,0, canvas.width, canvas.height);
                 
                 ctx.font = "40px Kiwi";
-                ctx.fillText("her0b0y", canvas.width/3, 100);
+                ctx.fillText("hero boy", canvas.width/3, 100);
                 
                 if( Menu.select == 0 )
                 {
