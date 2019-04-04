@@ -80,9 +80,11 @@ var Level_1 = {
                 {
                         for( x in Level_1.map.tiles[y] )
                         {
-                                if( Level_1.map.tiles[y][x] != 0 )
+                                if( Level_1.map.tiles[y][x] == 1 )
                                 {
-                                        ctx.drawImage(Blocks[Level_1.map.tiles[y][x]].sprite, Blocks[Level_1.map.tiles[y][x]].dims[0]*x, Blocks[Level_1.map.tiles[y][x]].dims[1]*y, Blocks[Level_1.map.tiles[y][x]].dims[0], Blocks[Level_1.map.tiles[y][x]].dims[1]);
+                                        var tm = new Image();
+                                        tm.src = "res/tile_1.png";
+                                        ctx.drawImage(tm, 30*x,30*y, 30,30);
                                 }
                         }
                 }
