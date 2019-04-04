@@ -23,7 +23,7 @@ var Player = {
                         Player._vel[0] = 10;
                 }
                 
-                if( code == 87 || code == 39 )
+                if( code == 87 || code == 38 )
                 {
                         Player._jump = true;
                 }
