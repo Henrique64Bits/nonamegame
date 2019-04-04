@@ -57,6 +57,12 @@ var Level_1 = {
                 Player.colliders(Level_1.map.tiles);
                 
                 
+                if( Player.position[0] >= canvas.width/2 )
+                {
+                        Level_1.map.x += -1;
+                }
+                
+                
 
                 var tm = new Image();
                 tm.src = "res/tile_1.png";
