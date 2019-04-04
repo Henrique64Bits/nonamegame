@@ -17,6 +17,7 @@ canvas.height = valor2;
 //window.addEventListener("keydown", keyDown);
 //window.addEventListener("keyup", keyUp);
 
+Level_1.main();
 loop();
 
 
