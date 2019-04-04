@@ -63,7 +63,7 @@ var Level_1 = {
                         for( x in Level_1.map.tiles[y] )
                         {
                                 var i = Level_1.map.tiles[y][x];
-                                if( i == 1 )
+                                if( i != 0 )
                                 {
                                         ctx.drawImage(tm, (Blocks[i].dims[0]*x)*Level_1.map.x,(Blocks[i].dims[1]*y)*Level_1.map.y, Blocks[i].dims[0],Blocks[i].dims[1]);
                                 }
