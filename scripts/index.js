@@ -27,11 +27,7 @@ loop();
 
 
 function render()
-{
-     var img = new Image();
-     img.src = "res/background_1.png";
-     ctx.drawImage(img, 0,0, canvas.width, canvas.height);
-     
+{    
      if( _scene == "menu" )
      {
           Menu.main(canvas, ctx);
