@@ -21,7 +21,7 @@ var Player = {
                         for( x in tl[y] )
                         {
                                 var i = tl[y][x]
-                                if( i == 1 )
+                                if( i != 1 )
                                 {
                                         var pBottom = Player._position[1] + Player._dims[1];
                                         var pTop = Player._position[1];
