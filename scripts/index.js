@@ -1,11 +1,16 @@
-var canvas = document.querySelector("#game_canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.querySelector("#game_canvas")
+const ctx = canvas.getContext("2d")
 
-var stylew1 = window.getComputedStyle(canvas).width;
-var valor1 = parseInt(stylew1.substr(0,stylew1.search("px")));
+const resizeCanvas = {
+	"width": => parseInt(window.getComputedStyle(canvas).width.substr(0,stylew1.search("px"))),
+	"height": => parseInt(window.getComputedStyle(canvas).height.substr(0,stylew1.search("px"))),
+}
 
-var stylew2 = window.getComputedStyle(canvas).height;
-var valor2 = parseInt(stylew2.substr(0,stylew2.search("px")));
+const stylew1 = window.getComputedStyle(canvas).width;
+const valor1 = parseInt(stylew1.substr(0,stylew1.search("px")));
+
+const stylew2 = window.getComputedStyle(canvas).height;
+const valor2 = parseInt(stylew2.substr(0,stylew2.search("px")));
 
 canvas.width = valor1;
 canvas.height = valor2;
